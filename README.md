@@ -17,7 +17,5 @@ I love to work with new technologies and playing with Data and AI.🤖
 </a>
 </p>
 
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=mdmosfikurrahman&align=center&theme=radical&repo=100-Days-Of-ML-Code&show_owner=true)](https://github.com/harunurrashid97/100-Days-Of-ML-Code)
-
 
 <p align="left"> <img src="https://github-readme-stats.vercel.app/api?username=mdmosfikurrahman&theme=synthwave&show_icons=true" alt="mdmosfikurrahman" /> </h1>
