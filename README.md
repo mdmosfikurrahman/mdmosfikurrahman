@@ -11,7 +11,7 @@ I love to work with new technologies and playing with Data and AI.🤖
 Moreover, I am a Software Engineer in BJIT Group.
 
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=mdmosfikurrahman&theme=retrowave&show_icons=true" alt="mdmosfikurrahman" />
-<a href="https://github.com/mdmosfikurrahman"> <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=mdmosfikurrahman&layout=compact&theme=noctis" />
+<img src="https://github-readme-stats.vercel.app/api?username=mdmosfikurrahman&theme=Cyberpunk&show_icons=true" alt="mdmosfikurrahman" />
+<a href="https://github.com/mdmosfikurrahman"> <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=mdmosfikurrahman&layout=compact&theme=Cyberpunk" />
 </a>
 </p>
