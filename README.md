@@ -6,7 +6,7 @@
 :wave: Hi there, My name is Md. Mosfikur Rahman.😀 I'm 26 years old, I'm a Software Engineer at BJIT Limited. And a self-taught Data Scientist.
 I've profound knowledge in Machine Learning, Deep Learning, Natural language processing, AI Software Development. 
 Currently, I have completed undergraduate in CSE from Bangladesh.
-<img align="right" alt="GIF" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="400" height="256" />
+<img align="right" alt="GIF" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="350" height="224" />
 
 I'm interested in doing research on Machine Learning, Artificial Intelligene and Data Related Problem. 
 I love to work with new technologies and playing with Data and AI.🤖
