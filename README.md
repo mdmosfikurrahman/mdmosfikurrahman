@@ -8,4 +8,4 @@
 
 <img src="https://komarev.com/ghpvc/?username=mdmosfikurrahman" alt="mdmosfikurrahman" />
 
-![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=mdmosfikurrahman&theme=buefy)  
+![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=mdmosfikurrahman&theme=dark)  
