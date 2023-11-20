@@ -5,7 +5,8 @@
 # 💫 About Me:
 🔭 I’m working at REVE Systems Ltd. as Software Engineer<br>👯 I’m contributing at National Board of Revenue (NBR)'s Customs Bond Management System (CBMS) project under e-Governance, ICT Division.<br>🌱 I’m currently learning DevOps<br>💬 Ask me about Java, Spring, JavaScript, Data Science, Machine Learning, Artificial Intelligence and anything!<br>⚡ Fun fact is NOTHING! 🙂
 
-
+---
+[![](https://visitcount.itsvg.in/api?id=mdmosfikurrahman&icon=0&color=0)](https://visitcount.itsvg.in)
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/mdmosfikurrahman.matul) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/_mosfik_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/mdmosfikurrahman)
 
@@ -16,7 +17,5 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=mdmosfikurrahman&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=mdmosfikurrahman&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
----
-[![](https://visitcount.itsvg.in/api?id=mdmosfikurrahman&icon=0&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
