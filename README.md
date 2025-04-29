@@ -3,7 +3,11 @@
 <h5 align="center">with a Strong Focus on Research and Innovation</h5>
 
 # 💫 About Me:
-🔭 I’m working at REVE Systems Ltd. as Software Engineer<br>👯 I’m contributing at National Board of Revenue (NBR)'s Customs Bond Management System (CBMS) project under e-Governance, ICT Division.<br>🌱 I’m currently learning DevOps<br>💬 Ask me about Java, Spring, JavaScript, Data Science, Machine Learning, Artificial Intelligence and anything!<br>⚡ Fun fact is NOTHING! 🙂
+🔭 I’m currently working as Engineer-II at Akij iBOS Ltd.
+👯 I contribute to multiple projects simultaneously while leading teams and driving results.
+🌱 I’m actively expanding my knowledge in DevOps and modern software practices.
+💬 Feel free to ask me about Java, Spring, JavaScript, Data Science, Machine Learning, or AI — always happy to share!
+⚡ Fun fact: Absolutely nothing... and that's what makes it interesting! 🙂
 
 ---
 [![](https://visitcount.itsvg.in/api?id=mdmosfikurrahman&icon=0&color=0)](https://visitcount.itsvg.in)
