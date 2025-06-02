@@ -1,32 +1,96 @@
-<h1 align="center">Hi 👋, I'm Mosfik</h1>
-<h3 align="center">A Passionate Backend Developer from Bangladesh</h3>
-<h5 align="center">with a Strong Focus on Research and Innovation</h5>
+# 👋 Hey there! I'm Md. Mosfikur Rahman
 
-# 💫 About Me:
-- 🔭 Working as Engineer-II at Akij iBOS Ltd.
-- 👯 Contributing to multiple projects and leading teams effectively.
-- 🌱 Currently learning DevOps and exploring modern development practices.
-- 💬 Ask me about:
-  - Java
-  - Spring
-  - .NET Core
-  - JavaScript
-  - Data Science
-  - Machine Learning
-  - Artificial Intelligence
-- ⚡ Fun fact: NOTHING! 🙂
+🧠 Full-time Software Engineer · Part-time Tech Tinkerer · Always Curious
+
+With 3+ years of hands-on experience, I bridge the gap between clean code and real-world impact. Whether it’s scaling enterprise apps or turbocharging cloud systems, I engineer software that *just works* — and keeps working under pressure.
+
+I’ve built, led, and optimized systems at some of Bangladesh’s top tech firms — from launching **Akij Air’s backend system** to architecting modules for the **National Board of Revenue**. I’ve also represented Bangladesh through an Erasmus+ exchange program in Poland 🇵🇱, and spoken at IEEE and Springer conferences.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=mdmosfikurrahman&icon=0&color=0)](https://visitcount.itsvg.in)
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/mdmosfikurrahman.matul) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/_mosfik_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/mdmosfikurrahman)
 
-# 💻 Tech Stack:
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?style=for-the-badge&logo=Thymeleaf&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=mdmosfikurrahman&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=mdmosfikurrahman&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=mdmosfikurrahman&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+## 🔧 Tech Toolkit
 
+I speak fluent `Java`, `C#`, `JavaScript`, `Python`, and sometimes even `human`.
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+- 🔙 Backend: Spring Boot · .NET Core · REST APIs · Microservices · Camunda
+- 🛠️ DevOps: Docker · Kubernetes · CI/CD · GCP · Git
+- 🗄️ DBs: PostgreSQL · Oracle · SQL Server · MongoDB
+- 🧪 Testing: JUnit · TDD · Agile · DDD
+- 🌐 Frontend: HTML · CSS · JS · Bootstrap · React · Thymeleaf
+
+---
+
+## 🚀 Currently On a Mission To...
+
+- 🧬 Upgrade monolith Java apps to **JDK 21**
+- 🔐 Deep dive into **Spring Security**, **Jakarta EE**, and **Cloud Native** design
+- 🧪 Embrace **Test-Driven Development** and refine scalable architectures
+
+---
+
+## 🎤 Outside the Code
+
+- 🗣️ IEEE Conference Speaker (WIECON-ECE 2024)
+- 📚 Published 7+ research papers (AI, cybersecurity, healthtech)
+- 💡 Ex-VP, Research Wing @ DIU C&P Club
+- 🍿 Fun Fact: I *look* serious, but I code like a hobbit — quiet, clever, and always surprising 💥
+
+------
+<h3 align="left">Activity:</h3>
+
+![Mosfik's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mdmosfikurrahman&bg_color=ffffff&color=4c5e9e&line=4c569e&point=403e41&area=true&hide_border=true)
+
+<div align="center">
+  <a href="https://github.com/mdmosfikurrahman">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs?username=mdmosfikurrahman&show_icons=true&locale=en&layout=compact&theme=default&include_all_commits=true&count_private=true" alt="Top Languages"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mdmosfikurrahman&show_icons=true&locale=en&layout=compact&theme=default&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
+  </a>
+</div>
+
+<p align="center">
+  <a href="https://github.com/mdmosfikurrahman">
+    <img src="https://github-readme-streak-stats.herokuapp.com?user=mdmosfikurrahman&theme=default&hide_border=false" alt="GitHub Streak"/>
+  </a>
+</p>
+
+------
+<h3 align="left">Languages and Tools:</h3>
+<table>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Backend:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=java,cs,dotnet,python,spring,maven,hibernate,gradle"/></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center;">Frontend:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=react,bootstrap,html,css,js,ts"/></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Database:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=mysql,postgresql,mongodb"/></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">DevOps:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=docker,githubactions"/></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Version Control:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=git,github,gitlab,bitbucket"/></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Ides:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=vscode,idea,rider,phpstorm,webstorm,pycharm,sublime"/></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Operating Systems:</td>
+        <td><img height="40" src="https://skillicons.dev/icons?i=windows,ubuntu,debian"/></td>
+    </tr>
+</table>
+
+------
+
+> "Great code is not just written — it’s designed, tested, debated, and crafted with care."
+
+Let’s build something that lasts. Connect with me:  
+📫 **mdmosfikurrahman.cse@gmail.com**  
+
+🌐 [Portfolio](https://mdmosfikurrahman.github.io)
