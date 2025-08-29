@@ -2,9 +2,9 @@
 
 🧠 Full-time Software Engineer · Part-time Tech Tinkerer · Always Curious
 
-With 3+ years of hands-on experience, I bridge the gap between clean code and real-world impact. Whether it’s scaling enterprise apps or turbocharging cloud systems, I engineer software that *just works* — and keeps working under pressure.
+With 3+ years of hands-on experience, I bridge the gap between clean code and real-world impact. Whether it’s scaling enterprise apps or turbocharging cloud systems, I engineer software that *just works* and keeps working under pressure.
 
-I’ve built, led, and optimized systems at some of Bangladesh’s top tech firms — from launching **Akij Air’s backend system** to architecting modules for the **National Board of Revenue**. I’ve also represented Bangladesh through an Erasmus+ exchange program in Poland 🇵🇱, and spoken at IEEE and Springer conferences.
+I’ve built, led, and optimized systems at some of Bangladesh’s top tech firms from launching **Akij Air’s backend system** to architecting modules for the **National Board of Revenue**. I’ve also represented Bangladesh through an Erasmus+ exchange program in Poland 🇵🇱, and spoken at IEEE and Springer conferences.
 
 ---
 
@@ -33,7 +33,7 @@ I speak fluent `Java`, `C#`, `JavaScript`, `Python`, and sometimes even `human`.
 - 🗣️ IEEE Conference Speaker (WIECON-ECE 2024)
 - 📚 Published 7+ research papers (AI, cybersecurity, healthtech)
 - 💡 Ex-VP, Research Wing @ DIU C&P Club
-- 🍿 Fun Fact: I *look* serious, but I code like a hobbit — quiet, clever, and always surprising 💥
+- 🍿 Fun Fact: I *look* serious, but I code like a hobbit quiet, clever, and always surprising 💥
 
 ------
 <h3 align="left">Activity:</h3>
@@ -88,9 +88,11 @@ I speak fluent `Java`, `C#`, `JavaScript`, `Python`, and sometimes even `human`.
 
 ------
 
-> "Great code is not just written — it’s designed, tested, debated, and crafted with care."
+> "Great code is not just written it’s designed, tested, debated, and crafted with care."
 
-Let’s build something that lasts. Connect with me:  
+Let’s build something that lasts.
+
+Connect with me:  
 📫 **mdmosfikurrahman.cse@gmail.com**  
 
 🌐 [Portfolio](https://mdmosfikurrahman.github.io)
