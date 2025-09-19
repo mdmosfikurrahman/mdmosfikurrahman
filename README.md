@@ -1,42 +1,62 @@
 # 👋 Hey there! I'm Md. Mosfikur Rahman
 
-🧠 Full-time Software Engineer · Part-time Tech Tinkerer · Always Curious
+🧠 Software Engineer (Backend) · Systems Design · Microservices
 
-With 3+ years of hands-on experience, I bridge the gap between clean code and real-world impact. Whether it’s scaling enterprise apps or turbocharging cloud systems, I engineer software that *just works* and keeps working under pressure.
-
-I’ve built, led, and optimized systems at some of Bangladesh’s top tech firms from launching **Akij Air’s backend system** to architecting modules for the **National Board of Revenue**. I’ve also represented Bangladesh through an Erasmus+ exchange program in Poland 🇵🇱, and spoken at IEEE and Springer conferences.
+I bridge clean code with real-world impact. Over **5+ years**, I’ve shipped and scaled production systems across aviation, public sector, and e-commerce — from **architecture planning** to **performance tuning** and **CI/CD hardening**.
 
 ---
 
-## 🔧 Tech Toolkit
+## 🔥 Highlights
 
-I speak fluent `Java`, `C#`, `JavaScript`, `Python`, and sometimes even `human`.
+- **Akij iBOS Ltd. (Nov 2024—Present)** — Shaping early **microservice architecture** for the **Akij Air** platform; delivered REST APIs & SQL reporting for **TrackForce**; introduced CI/CD workflows to cut manual deployment steps.  
+- **REVE Systems (Jul 2023—Oct 2024)** — Refactored monoliths into microservices; optimized **Oracle** usage; built production modules for the **NBR Customs Bond** system (audit trails, RBAC, integrations).  
+- **BJIT (Apr 2022—Jun 2023)** — Built **GraphQL BFF** in Java/Spring Boot (schema stitching, batching); backend work for **Rakuten**; CMS features for **Denka** with Thymeleaf.  
+- **TA, DIU (2020—2022)** — OOP/Data Structures labs, mentoring, and assessment.
 
-- 🔙 Backend: Spring Boot · .NET Core · REST APIs · Microservices · Camunda
-- 🛠️ DevOps: Docker · Kubernetes · CI/CD · GCP · Git
-- 🗄️ DBs: PostgreSQL · Oracle · SQL Server · MongoDB
-- 🧪 Testing: JUnit · TDD · Agile · DDD
-- 🌐 Frontend: HTML · CSS · JS · Bootstrap · React · Thymeleaf
-
----
-
-## 🚀 Currently On a Mission To...
-
-- 🧬 Upgrade monolith Java apps to **JDK 21**
-- 🔐 Deep dive into **Spring Security**, **Jakarta EE**, and **Cloud Native** design
-- 🧪 Embrace **Test-Driven Development** and refine scalable architectures
+> Erasmus+ exchange (Poland 🇵🇱); **IEEE WIECON-ECE 2024** speaker; **7+ publications** (AI, cybersecurity, ed-tech).
 
 ---
 
-## 🎤 Outside the Code
+## 🧰 Tech Toolkit
 
-- 🗣️ IEEE Conference Speaker (WIECON-ECE 2024)
-- 📚 Published 7+ research papers (AI, cybersecurity, healthtech)
-- 💡 Ex-VP, Research Wing @ DIU C&P Club
-- 🍿 Fun Fact: I *look* serious, but I code like a hobbit quiet, clever, and always surprising 💥
+I speak fluent `Java` (8/11/17/21), `JavaScript`, and `Python` — and `C#` when the job calls for it.
 
-------
-<h3 align="left">Activity:</h3>
+- **Backend:** Spring Boot · Spring Security · REST · GraphQL (BFF) · JPA/JDBC · Camunda · Drools  
+- **DevOps:** Docker · GitHub Actions · CI/CD · OAuth2  
+- **Databases:** Oracle · PostgreSQL · SQL Server · MySQL · MongoDB  
+- **Frontend (as needed):** React · Thymeleaf · HTML/CSS/JS  
+- **Practices:** Microservices · API Design · Stored Procedures · Agile/Scrum · Monitoring & Log Analysis  
+- **OS/Tools:** Linux/Unix · UML · JIRA · DataGrip
+
+---
+
+## 🚀 Now Working On
+
+- Migrating legacy Java services to **JDK 21**  
+- Deep diving **Spring Security** and **cloud-native** patterns  
+- Practicing **TDD** to keep architectures evolvable
+
+---
+
+## 🧩 Selected Projects
+
+- **Akij Air — Backend (planning stage):** service boundaries, module design (partner onboarding, flight inventory, routing), ADRs, integration strategy with GDS.  
+- **TrackForce:** Led backend/frontend/QA; built REST APIs + reporting (SQL stored procedures); real-time tracking.  
+- **Customs Bond Management — NBR:** Legal/Case Info & UD modules; BGMEA/BKMEA integrations; audit trail + RBAC.  
+- **Rakuten (E-commerce):** Spring Boot services tailored to Rakuten’s ecosystem; cross-team backend support.  
+- **Denka Corporate:** CMS & marquee components; multilingual content scheduling; SEO/analytics integration.
+
+---
+
+## 🎤 Research & Talks
+
+- **Speaker:** IEEE **WIECON-ECE 2024**  
+- **Publications:** 7+ papers across journals and Springer/IEEE venues (AI, security, healthtech).  
+- **Community:** Former VP (Research Wing), DIU C&P Club; reviewer for multiple journals/conferences.
+
+---
+
+<h3 align="left">Activity</h3>
 
 ![Mosfik's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mdmosfikurrahman&bg_color=ffffff&color=4c5e9e&line=4c569e&point=403e41&area=true&hide_border=true)
 
@@ -47,52 +67,9 @@ I speak fluent `Java`, `C#`, `JavaScript`, `Python`, and sometimes even `human`.
   </a>
 </div>
 
-<p align="center">
-  <a href="https://github.com/mdmosfikurrahman">
-    <img src="https://github-readme-streak-stats.herokuapp.com?user=mdmosfikurrahman&theme=default&hide_border=false" alt="GitHub Streak"/>
-  </a>
-</p>
+---
 
-------
-<h3 align="left">Languages and Tools:</h3>
-<table>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Backend:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=java,cs,dotnet,python,spring,maven,hibernate,gradle"/></td>
-    </tr>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center;">Frontend:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=react,bootstrap,html,css,js,ts"/></td>
-    </tr>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Database:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=mysql,postgresql,mongodb"/></td>
-    </tr>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">DevOps:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=docker,githubactions"/></td>
-    </tr>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Version Control:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=git,github,gitlab,bitbucket"/></td>
-    </tr>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Ides:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=vscode,idea,rider,phpstorm,webstorm,pycharm,sublime"/></td>
-    </tr>
-    <tr>
-        <td style="font-weight: bold; padding-right: 10px; vertical-align: center; border: none;">Operating Systems:</td>
-        <td><img height="40" src="https://skillicons.dev/icons?i=windows,ubuntu,debian"/></td>
-    </tr>
-</table>
+> “Great code is not just written — it’s designed, tested, debated, and crafted with care.”
 
-------
-
-> "Great code is not just written it’s designed, tested, debated, and crafted with care."
-
-Let’s build something that lasts.
-
-Connect with me:  
-📫 **mdmosfikurrahman.cse@gmail.com**  
-
-🌐 [Portfolio](https://mdmosfikurrahman.github.io)
+**Let’s build something that lasts.**  
+📫 **mdmosfikurrahman.cse@gmail.com** · 🌐 **[Portfolio](https://mdmosfikurrahman.github.io)**
