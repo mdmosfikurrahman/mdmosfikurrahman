@@ -1,75 +1,133 @@
-# 👋 Hey there! I'm Md. Mosfikur Rahman
+<h1 align="center">Hi, I'm Md. Mosfikur Rahman 👋</h1>
 
-🧠 Software Engineer (Backend) · Systems Design · Microservices
+<p align="center">
+  <b>Software Engineer (Backend & Data-Intensive Systems)</b> · Microservices · Applied Machine Learning · Research
+</p>
 
-I bridge clean code with real-world impact. Over **5+ years**, I’ve shipped and scaled production systems across aviation, public sector, and e-commerce — from **architecture planning** to **performance tuning** and **CI/CD hardening**.
-
----
-
-## 🔥 Highlights
-
-- **Akij iBOS Ltd. (Nov 2024—Present)** — Shaping early **microservice architecture** for the **Akij Air** platform; delivered REST APIs & SQL reporting for **TrackForce**; introduced CI/CD workflows to cut manual deployment steps.  
-- **REVE Systems (Jul 2023—Oct 2024)** — Refactored monoliths into microservices; optimized **Oracle** usage; built production modules for the **NBR Customs Bond** system (audit trails, RBAC, integrations).  
-- **BJIT (Apr 2022—Jun 2023)** — Built **GraphQL BFF** in Java/Spring Boot (schema stitching, batching); backend work for **Rakuten**; CMS features for **Denka** with Thymeleaf.  
-- **TA, DIU (2020—2022)** — OOP/Data Structures labs, mentoring, and assessment.
-
-> Erasmus+ exchange (Poland 🇵🇱); **IEEE WIECON-ECE 2024** speaker; **7+ publications** (AI, cybersecurity, ed-tech).
+<p align="center">
+  <a href="https://mdmosfikurrahman.github.io"><img src="https://img.shields.io/badge/Portfolio-4c5e9e?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://github.com/mdmosfikurrahman"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://www.linkedin.com/in/mdmosfikurrahman"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://scholar.google.com/citations?user=mdmosfikurrahman"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar"/></a>
+  <a href="mailto:mdmosfikurrahman.cse@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+</p>
 
 ---
 
-## 🧰 Tech Toolkit
+## 🧭 About Me
 
-I speak fluent `Java` (8/11/17/21), `JavaScript`, and `Python` — and `C#` when the job calls for it.
+I'm a software engineer with **4+ years of production experience** building backend and data-intensive systems, paired with a research record of **10 peer-reviewed publications** in applied machine learning and data analysis.
 
-- **Backend:** Spring Boot · Spring Security · REST · GraphQL (BFF) · JPA/JDBC · Camunda · Drools  
-- **DevOps:** Docker · GitHub Actions · CI/CD · OAuth2  
-- **Databases:** Oracle · PostgreSQL · SQL Server · MySQL · MongoDB  
-- **Frontend (as needed):** React · Thymeleaf · HTML/CSS/JS  
-- **Practices:** Microservices · API Design · Stored Procedures · Agile/Scrum · Monitoring & Log Analysis  
-- **OS/Tools:** Linux/Unix · UML · JIRA · DataGrip
+My work sits where engineering meets data — designing **microservices, rule engines, and distributed pipelines** that hold up at scale, and turning noisy real-world data into models and systems that are genuinely usable. Across roles at **Akij iBOS**, **REVE Systems**, and **BJIT**, I've owned architecture for national-scale and enterprise platforms; in research, I've first-authored and reviewed work in applied ML and data-driven analytics.
+
+> 🎓 Currently exploring graduate study in **data-intensive, intelligent software systems** — where these two threads come together.
 
 ---
 
-## 🚀 Now Working On
+## 💼 Experience
 
-- Migrating legacy Java services to **JDK 21**  
-- Deep diving **Spring Security** and **cloud-native** patterns  
+**🏢 Software Engineer L-II — Akij iBOS Ltd.** · *Nov 2024 – Present*
+- Own end-to-end architecture for the **Online Travel Agency (OTA)** domain — supplier configuration, pricing rules, and booking workflows.
+- Designed a **Drools-based rule engine** for context-aware pricing and decision-making.
+- Led backend design for supplier orchestration and aggregated response generation across a polyglot microservices stack (**Java · .NET · Node.js**).
+- Deployed services with **Docker & Kubernetes**, **gRPC** for inter-service communication, on **Azure / AWS**.
+
+**🏢 Software Engineer — REVE Systems Ltd.** · *Jul 2023 – Oct 2024*
+- Built backend systems in **Java, Spring Boot, and Oracle** for the **Customs Bond Management System**, a National Board of Revenue (NBR) platform.
+- Improved system throughput by **~25%** through query tuning and data-access optimization.
+- Delivered the **Legal Case** and **Utilization Declaration** modules; built **BGMEA/BKMEA** database sync for export compliance.
+- Implemented **OAuth2 / Spring Security** authentication and clean-architecture REST APIs.
+
+**🏢 Software Engineer (Backend — Java & GraphQL) — BJIT Group** · *Apr 2022 – Jun 2023*
+- Built **GraphQL Backend-for-Frontend (BFF)** services for **Rakuten** e-commerce modules using Java and Spring Boot.
+- Implemented **resolver batching** and **schema stitching**, reducing nested-query latency.
+- Optimized database access paths and contributed reusable service patterns and internal tooling.
+
+---
+
+## 🛠️ Tech Stack
+
+**Languages**
+
+![Java](https://img.shields.io/badge/Java_8–21-007396?style=flat-square&logo=openjdk&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+**Backend & Frameworks**
+
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![.NET](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
+![REST](https://img.shields.io/badge/REST_APIs-005571?style=flat-square&logo=fastapi&logoColor=white)
+![Drools](https://img.shields.io/badge/Drools_Rule_Engine-C22D40?style=flat-square&logo=redhat&logoColor=white)
+
+**Databases**
+
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+
+**DevOps & Cloud**
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![gRPC](https://img.shields.io/badge/gRPC-244c5a?style=flat-square&logo=google&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+**Data Science & ML**
+
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+
+---
+
+## 🔬 Research & Publications
+
+📚 **10 peer-reviewed publications** — 3 journal articles & 7 conference papers in **applied ML, cybersecurity, health analytics, and ed-tech**.
+
+- 🥇 **First / lead author** on multiple works, including an **IEEE WIECON-ECE** paper on IoT-based smart infrastructure.
+- 🎤 **Conference Speaker** — 10th IEEE International Women in Engineering (WIE) Conference, **IEEE WIECON-ECE 2024**.
+- 🧑‍⚖️ **Peer Reviewer** — *ISA Transactions*, *Natural Language Processing Journal*, *Journal of King Saud University – Computer & Information Sciences*, *Current Research in Behavioral Sciences*, and several international conferences.
+
+**Selected publications**
+- *Impact of COVID-19 on Mental Health: A Quantitative Analysis of Anxiety and Depression* — **Current Research in Behavioral Sciences** (2021) · [DOI](https://doi.org/10.1016/j.crbeha.2021.100037)
+- *Future City of Bangladesh: IoT-Based Autonomous Smart Sewerage and Hazard Condition Sharing System* — **IEEE WIECON-ECE** (2020) · [DOI](https://doi.org/10.1109/WIECON-ECE52138.2020.9397950)
+- *Cyber Security Intruder Detection Using Deep Learning Approach* — **Springer** (2023) · [DOI](https://doi.org/10.1007/978-3-031-13150-9_42)
+- *Machine Learning-Based Prediction of COVID-19: A Robust Approach for Early Diagnosis and Treatment* — **Springer Nature** (2024) · [DOI](https://doi.org/10.1007/978-981-97-1923-5_16)
+
+> 📄 Full list on my [Google Scholar](https://scholar.google.com/citations?user=mdmosfikurrahman) profile.
+
+---
+
+## 🎓 Education
+
+- **B.Sc. in Computer Science & Engineering** — Daffodil International University, Bangladesh · *CGPA 3.83 / 4.00* (2018–2021)
+- **Erasmus+ International Exchange** — Adam Mickiewicz University, Poznań, Poland 🇵🇱 (2021)
+
+**Certifications:** IBM Data Science Professional Certificate (Coursera) · Data Science & Machine Learning (DataCamp)
+
+---
+
+## 🌱 Currently Focused On
+
+- Migrating legacy Java services to **JDK 21** and cloud-native patterns
+- Deepening **Spring Security**, distributed systems, and rule-driven architecture
 - Practicing **TDD** to keep architectures evolvable
 
 ---
 
-## 🧩 Selected Projects
+<p align="center">
+  <i>"Great code is not just written — it's designed, tested, debated, and crafted with care."</i>
+</p>
 
-- **Akij Air — Backend (planning stage):** service boundaries, module design (partner onboarding, flight inventory, routing), ADRs, integration strategy with GDS.  
-- **TrackForce:** Led backend/frontend/QA; built REST APIs + reporting (SQL stored procedures); real-time tracking.  
-- **Customs Bond Management — NBR:** Legal/Case Info & UD modules; BGMEA/BKMEA integrations; audit trail + RBAC.  
-- **Rakuten (E-commerce):** Spring Boot services tailored to Rakuten’s ecosystem; cross-team backend support.  
-- **Denka Corporate:** CMS & marquee components; multilingual content scheduling; SEO/analytics integration.
-
----
-
-## 🎤 Research & Talks
-
-- **Speaker:** IEEE **WIECON-ECE 2024**  
-- **Publications:** 7+ papers across journals and Springer/IEEE venues (AI, security, healthtech).  
-- **Community:** Former VP (Research Wing), DIU C&P Club; reviewer for multiple journals/conferences.
-
----
-
-<h3 align="left">Activity</h3>
-
-![Mosfik's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=mdmosfikurrahman&bg_color=ffffff&color=4c5e9e&line=4c569e&point=403e41&area=true&hide_border=true)
-
-<div align="center">
-  <a href="https://github.com/mdmosfikurrahman">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs?username=mdmosfikurrahman&show_icons=true&locale=en&layout=compact&theme=default&include_all_commits=true&count_private=true" alt="Top Languages"/>
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=mdmosfikurrahman&show_icons=true&locale=en&layout=compact&theme=default&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
-  </a>
-</div>
-
----
-
-> “Great code is not just written — it’s designed, tested, debated, and crafted with care.”
-
-**Let’s build something that lasts.**  
-📫 **mdmosfikurrahman.cse@gmail.com** · 🌐 **[Portfolio](https://mdmosfikurrahman.github.io)**
+<p align="center">
+  📫 <b>mdmosfikurrahman.cse@gmail.com</b> · 🌐 <a href="https://mdmosfikurrahman.github.io">Portfolio</a><br/>
+  <b>Let's build something that lasts.</b>
+</p>
