@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="900" height="306" viewBox="0 0 900 306" role="img"
-     aria-label="Topology of the Travilo platform. Admin, B2B agency and B2C web panels built on Next.js call eight .NET 9 services &#8212; reservation, finance, configuration, notification, report, user, visa and hotel. A search orchestrator issues eleven parallel gRPC calls to Sabre, Amadeus, Travelport, PKfare and seven further connectors, then merges, ranks and streams results back. Three white-label tenants; 96 pricing rules held as configuration rather than code.">
+     aria-label="Topology of the Travilo platform. Admin, B2B agency and B2C web panels on Next.js call eight .NET 9 services — reservation, finance, configuration, notification, report, user, visa and hotel. A search orchestrator issues eleven parallel gRPC calls to Sabre, Amadeus, Travelport, PKfare and seven further connectors, then merges, ranks and streams the results back. Three white-label tenants; 96 pricing rules held as configuration rather than code.">
   <title>Platform topology &#8212; eight services, eleven connectors, three tenants</title>
   <defs>
-    <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
-      <feGaussianBlur stdDeviation="2.2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+  <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+    <feGaussianBlur stdDeviation="2.2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
   </defs>
 
   <rect x="0.5" y="0.5" width="899" height="305" rx="10" fill="#0d1117" stroke="#30363d"/>

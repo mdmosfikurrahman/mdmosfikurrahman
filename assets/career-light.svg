@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="900" height="424" viewBox="0 0 900 424" role="img"
+     aria-label="Career timeline, 2018 to 2026. A B.Sc. in Computer Science and Engineering at Daffodil International University with a CGPA of 3.83, including an Erasmus+ exchange semester at Adam Mickiewicz University in Poznan. Applied machine learning research runs from 2020 to now — ten papers, 185 citations, h-index 4 — alongside peer review for four journals and three conferences. Industry work moves from GraphQL backend-for-frontend services in Java at BJIT Group, to the National Board of Revenue customs bond system in Spring Boot and Oracle at REVE Systems, to .NET 9 platform architecture at Akij iBOS leading a team of ten, with open-source and personal builds alongside.">
+  <title>Two threads, one instinct &#8212; eight years of engineering and research</title>
+  <defs>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <rect width="6" height="6" fill="#9a6700" opacity="0.26"/>
+    <rect width="2.5" height="6" fill="#9a6700" opacity="0.7"/>
+  </pattern>
+  <clipPath id="wipe"><rect x="257" y="0" width="0" height="424">
+    <animate attributeName="width" dur="10s" repeatCount="indefinite" calcMode="linear"
+             values="0;0;621;621;0;0" keyTimes="0;0.035;0.56;0.92;0.922;1"/>
+  </rect></clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="899" height="423" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+
+  <text x="24" y="30" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2328">Two threads, one instinct</text>
+  <text x="24" y="49" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#818b98">Production engineering and applied research in parallel since 2018 — Java, .NET and Python, three companies, ten papers.</text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2018<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.035;0.093"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2019<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.093;0.152"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2020<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.152;0.21"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2021<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.21;0.268"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2022<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.268;0.327"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2023<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.327;0.385"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2024<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.385;0.443"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2025<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.443;0.502"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#0969da" opacity="0">2026<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.502;0.56"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">undergraduate · CSE<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.035;0.093"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">undergraduate · CSE<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.093;0.152"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">Python · applied ML<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.152;0.21"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">Python · applied ML<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.21;0.268"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">Java · GraphQL<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.268;0.327"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">Java · Spring Boot · Oracle<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.327;0.385"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">Spring Boot → .NET 9<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.385;0.443"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">.NET 9 · gRPC · Kubernetes<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.443;0.502"/></text>
+  <text x="876" y="53" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#818b98" opacity="0">.NET 9 · Java 21 · Next.js<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.502;0.56"/></text>
+  <line x1="258" y1="84.0" x2="258" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="258" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2018</text>
+  <line x1="326.667" y1="84.0" x2="326.667" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="326.667" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2019</text>
+  <line x1="395.333" y1="84.0" x2="395.333" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="395.333" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2020</text>
+  <line x1="464" y1="84.0" x2="464" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="464" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2021</text>
+  <line x1="532.667" y1="84.0" x2="532.667" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="532.667" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2022</text>
+  <line x1="601.333" y1="84.0" x2="601.333" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="601.333" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2023</text>
+  <line x1="670" y1="84.0" x2="670" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="670" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2024</text>
+  <line x1="738.667" y1="84.0" x2="738.667" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="738.667" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2025</text>
+  <line x1="807.333" y1="84.0" x2="807.333" y2="372.0" stroke="#d0d7de" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="807.333" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#818b98">2026</text>
+  <line x1="258" y1="84.0" x2="258" y2="372.0" stroke="#d0d7de" stroke-width="1"/>
+  <rect x="24" y="96" width="852" height="30" fill="#f6f8fa" opacity="0.55"/>
+  <rect x="24" y="164" width="852" height="30" fill="#f6f8fa" opacity="0.55"/>
+  <rect x="24" y="232" width="852" height="30" fill="#f6f8fa" opacity="0.55"/>
+  <rect x="24" y="300" width="852" height="30" fill="#f6f8fa" opacity="0.55"/>
+  <rect x="246.4" y="404" width="9" height="9" rx="2" fill="#8250df"/>
+  <text x="260.4" y="412" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">Education</text>
+  <rect x="332.1" y="404" width="9" height="9" rx="2" fill="#9a6700"/>
+  <text x="346.1" y="412" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">Research</text>
+  <rect x="412.5" y="404" width="9" height="9" rx="2" fill="#bc4c00"/>
+  <text x="426.5" y="412" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">Java · Spring</text>
+  <rect x="519.4" y="404" width="9" height="9" rx="2" fill="#0969da"/>
+  <text x="533.4" y="412" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">.NET</text>
+  <rect x="578.6" y="404" width="9" height="9" rx="2" fill="#1a7f37"/>
+  <text x="592.6" y="412" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">Own builds</text>
+
+  <g clip-path="url(#wipe)">
+    <rect x="258" y="105" width="273.293" height="12" rx="3" fill="#8250df"/>
+    <rect x="470.867" y="139" width="34.333" height="12" rx="3" fill="#8250df"/>
+    <rect x="395.333" y="173" width="461.44" height="12" rx="3" fill="#9a6700"/>
+    <rect x="532.667" y="207" width="324.107" height="12" rx="3" fill="url(#hatch)"/>
+    <rect x="549.833" y="241" width="85.833" height="12" rx="3" fill="#bc4c00"/>
+    <rect x="635.667" y="275" width="91.327" height="12" rx="3" fill="#bc4c00"/>
+    <rect x="726.993" y="309" width="129.78" height="12" rx="3" fill="#0969da"/>
+    <rect x="767.507" y="343" width="89.267" height="12" rx="3" fill="#1a7f37"/>
+    <line x1="460.567" y1="80.0" x2="460.567" y2="376.0" stroke="#0969da" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.85"/>
+    <line x1="728.367" y1="80.0" x2="728.367" y2="376.0" stroke="#0969da" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.85"/>
+  </g>
+
+  <text x="24" y="110" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">B.Sc. Computer Science &amp; Engineering<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.035;0.047;0.92;0.968;1"/></text>
+  <text x="24" y="123" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">Daffodil International University · CGPA 3.83<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.035;0.047;0.92;0.968;1"/></text>
+  <text x="24" y="144" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">Erasmus+ exchange semester<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.216;0.228;0.92;0.968;1"/></text>
+  <text x="24" y="157" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">Adam Mickiewicz University, Poznań<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.216;0.228;0.92;0.968;1"/></text>
+  <text x="24" y="178" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">Applied ML research<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.152;0.164;0.92;0.968;1"/></text>
+  <text x="24" y="191" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">10 papers · 185 citations · h-index 4<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.152;0.164;0.92;0.968;1"/></text>
+  <text x="24" y="212" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">Peer review &amp; invited talks<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.268;0.28;0.92;0.968;1"/></text>
+  <text x="24" y="225" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">4 journals · 3 conferences · IEEE speaker<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.268;0.28;0.92;0.968;1"/></text>
+  <text x="24" y="246" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">BJIT Group — GraphQL BFF<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.283;0.295;0.92;0.968;1"/></text>
+  <text x="24" y="259" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">Java · GraphQL · Rakuten, Denka<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.283;0.295;0.92;0.968;1"/></text>
+  <text x="24" y="280" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">REVE Systems — NBR Customs Bond<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.356;0.368;0.92;0.968;1"/></text>
+  <text x="24" y="293" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">Spring Boot · Oracle · OAuth2<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.356;0.368;0.92;0.968;1"/></text>
+  <text x="24" y="314" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">Akij iBOS — Travilo platform<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.433;0.445;0.92;0.968;1"/></text>
+  <text x="24" y="327" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">.NET 9 · gRPC · Kubernetes · SQL Server<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.433;0.445;0.92;0.968;1"/></text>
+  <text x="24" y="348" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1f2328" opacity="0">Open source &amp; side builds<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.468;0.48;0.92;0.968;1"/></text>
+  <text x="24" y="361" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98" opacity="0">Flavian · Task-Flow-Manager · BloomERP<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.468;0.48;0.92;0.968;1"/></text>
+  <text x="467.567" y="388" text-anchor="start" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#0969da" opacity="0">IEEE Best Paper Award<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.215;0.229;0.92;0.968;1"/></text>
+  <text x="721.367" y="388" text-anchor="end" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="600" fill="#0969da" opacity="0">Team lead · 10 engineers<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.443;0.457;0.92;0.968;1"/></text>
+
+  <g opacity="0">
+    <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" calcMode="linear"
+                      values="0 0;0 0;618 0;618 0" keyTimes="0;0.035;0.56;1"/>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.035;0.047;0.54;0.585;1"/>
+    <line x1="258" y1="78" x2="258" y2="378" stroke="#0969da" stroke-width="1.5"/>
+    <circle cx="258" cy="382" r="3.2" fill="#0969da"/>
+  </g>
+</svg>

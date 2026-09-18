@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="416" viewBox="0 0 900 416" role="img"
-     aria-label="Distributed trace of one flight search on the Travilo platform. An API gateway span runs 9.8 seconds; inside it the reservation service resolves pricing rules in 0.24 seconds, then an orchestrator fans out in parallel to Sabre, Amadeus, Travelport, PKfare, AirMaster and six further connectors. Merging and ranking begins at 3.55 seconds and the first fare reaches the agent over Server-Sent Events at 3.6 seconds; 1,047 fares have streamed by 9.8 seconds.">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="900" height="416" viewBox="0 0 900 416" role="img"
+     aria-label="Distributed trace of one flight search. An API gateway span runs 9.8 seconds; inside it the reservation service resolves pricing rules in 0.24 seconds, then an orchestrator fans out in parallel to Sabre, Amadeus, Travelport, PKfare, AirMaster and six further connectors. Merging and ranking begins at 3.55 seconds, the first fare reaches the agent over Server-Sent Events at 3.6 seconds, and 1,047 fares have streamed by 9.8 seconds.">
   <title>One search, traced &#8212; eleven suppliers in parallel, first fare in 3.6 s</title>
   <defs>
-    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="6" height="6" fill="#3fb950" opacity="0.28"/>
-      <rect width="2.5" height="6" fill="#3fb950" opacity="0.75"/>
-    </pattern>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <rect width="6" height="6" fill="#3fb950" opacity="0.28"/>
+    <rect width="2.5" height="6" fill="#3fb950" opacity="0.75"/>
+  </pattern>
   <clipPath id="wipe"><rect x="223" y="0" width="0" height="416">
     <animate attributeName="width" dur="10s" repeatCount="indefinite" calcMode="linear"
              values="0;0;611;611;0;0" keyTimes="0;0.035;0.56;0.92;0.922;1"/>
@@ -25,7 +26,7 @@
   <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#3fb950" opacity="0">815<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.395;0.435"/></text>
   <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#3fb950" opacity="0">921<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.435;0.48"/></text>
   <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#3fb950" opacity="0">1,004<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.48;0.521"/></text>
-  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#3fb950" opacity="0">1,047<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.521;0.61"/></text>
+  <text x="876" y="38" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="21" font-weight="700" fill="#3fb950" opacity="0">1,047<animate attributeName="opacity" dur="10s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;0.521;0.56"/></text>
   <text x="876" y="53" text-anchor="end" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#6e7681">fares streamed</text>
   <line x1="224" y1="82.0" x2="224" y2="386.0" stroke="#30363d" stroke-width="1" stroke-dasharray="2 4"/>
   <text x="224" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">0 s</text>
@@ -48,18 +49,18 @@
   <rect x="24" y="336" width="852" height="20" fill="#161b22" opacity="0.55"/>
 
   <g clip-path="url(#wipe)">
-    <rect x="224" y="101" width="567.467" height="11.0" rx="3" fill="#58a6ff"/>
-    <rect x="227.474" y="125" width="562.834" height="11.0" rx="3" fill="#58a6ff"/>
-    <rect x="229.79" y="149" width="13.897" height="11.0" rx="3" fill="#bc8cff"/>
-    <rect x="244.846" y="173" width="535.04" height="11.0" rx="3" fill="#56d4dd"/>
-    <rect x="248.32" y="197" width="173.135" height="11.0" rx="3" fill="#3fb950"/>
-    <rect x="249.478" y="221" width="213.09" height="11.0" rx="3" fill="#3fb950"/>
-    <rect x="250.057" y="245" width="266.941" height="11.0" rx="3" fill="#3fb950"/>
-    <rect x="251.215" y="269" width="139.55" height="11.0" rx="3" fill="#3fb950"/>
-    <rect x="251.794" y="293" width="361.326" height="11.0" rx="3" fill="#3fb950"/>
-    <rect x="252.952" y="317" width="515.931" height="11.0" rx="3" fill="url(#hatch)"/>
-    <rect x="429.562" y="341" width="347.429" height="11.0" rx="3" fill="#d29922"/>
-    <rect x="433.615" y="365" width="353.219" height="11.0" rx="3" fill="#f0883e"/>
+    <rect x="224" y="101" width="567.467" height="11" rx="3" fill="#58a6ff"/>
+    <rect x="227.474" y="125" width="562.834" height="11" rx="3" fill="#58a6ff"/>
+    <rect x="229.79" y="149" width="13.897" height="11" rx="3" fill="#bc8cff"/>
+    <rect x="244.846" y="173" width="535.04" height="11" rx="3" fill="#56d4dd"/>
+    <rect x="248.32" y="197" width="173.135" height="11" rx="3" fill="#3fb950"/>
+    <rect x="249.478" y="221" width="213.09" height="11" rx="3" fill="#3fb950"/>
+    <rect x="250.057" y="245" width="266.941" height="11" rx="3" fill="#3fb950"/>
+    <rect x="251.215" y="269" width="139.55" height="11" rx="3" fill="#3fb950"/>
+    <rect x="251.794" y="293" width="361.326" height="11" rx="3" fill="#3fb950"/>
+    <rect x="252.952" y="317" width="515.931" height="11" rx="3" fill="url(#hatch)"/>
+    <rect x="429.562" y="341" width="347.429" height="11" rx="3" fill="#d29922"/>
+    <rect x="433.615" y="365" width="353.219" height="11" rx="3" fill="#f0883e"/>
     <line x1="433.615" y1="78.0" x2="433.615" y2="390.0" stroke="#58a6ff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.85"/>
     <line x1="791.467" y1="78.0" x2="791.467" y2="390.0" stroke="#58a6ff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.85"/>
   </g>
@@ -95,7 +96,7 @@
     <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite" calcMode="linear"
                       values="0 0;0 0;608 0;608 0" keyTimes="0;0.035;0.56;1"/>
     <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.035;0.047;0.54;0.585;1"/>
-    <line x1="224" y1="76.0" x2="224" y2="392.0" stroke="#58a6ff" stroke-width="1.5"/>
-    <circle cx="224" cy="396.0" r="3.2" fill="#58a6ff"/>
+    <line x1="224" y1="76" x2="224" y2="392" stroke="#58a6ff" stroke-width="1.5"/>
+    <circle cx="224" cy="396" r="3.2" fill="#58a6ff"/>
   </g>
 </svg>
