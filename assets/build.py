@@ -445,12 +445,21 @@ def rooms(theme):
 M_W, M_H = 900, 448
 M_SPLIT = 450.0
 M_LEFT, M_RIGHT = 24.0, 470.0
-M_BASE, M_TOP = 340.0, 200.0         # column chart floor and ceiling
+M_PLOT_X0, M_PLOT_X1 = 62.0, 430.0   # column chart, left of the value gutter
+M_BASE, M_TOP = 342.0, 196.0         # column chart floor and ceiling
 M_BAR_Y, M_BAR_H = 200.0, 24.0       # language rows
+
+
+def axis_ceiling(value, divisions=4):
+    """Round a maximum up to something a gridline can be labelled with."""
+    for step in (10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000):
+        if step * divisions >= value:
+            return step * divisions, step
+    return value, value / float(divisions)
 
 LANG_TONE = {"C#": "blue", "TypeScript": "purple", "Java": "orange",
              "JavaScript": "yellow", "Python": "green", "TeX": "faint",
-             "Jupyter Notebook": "green", "HTML": "faint", "Other": "faint"}
+             "Jupyter Notebook": "yellow", "HTML": "faint", "Other": "faint"}
 LANG_ROWS = 6
 
 
@@ -566,13 +575,10 @@ def measured(theme):
     out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
                'font-weight="700" letter-spacing="1.1" fill="%s">COMMITS PER YEAR'
                '</text>' % (f(M_LEFT), SANS, p["faint"]))
-    out.append('<line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s" '
-               'stroke-width="1"/>'
-               % (f(M_LEFT), M_BASE, f(M_SPLIT - 20), M_BASE, p["border"]))
 
     # Two series, because "where are the organisation commits" is the first
     # question this chart should answer rather than quietly fold into a total.
-    cursor = M_SPLIT - 20.0
+    cursor = M_PLOT_X1
     for tone, text in (("blue", "organisation"), ("green", "own")):
         width = 11.0 + len(text) * 4.7
         cursor -= width
@@ -582,31 +588,50 @@ def measured(theme):
                    '%s</text>' % (f(cursor + 11), SANS, p["faint"], esc(text)))
         cursor -= 10.0
 
-    span = (M_SPLIT - 20 - M_LEFT) / len(years)
-    top_value = max(commits)
-    scale = (M_BASE - M_TOP) / float(top_value)
+    # A column chart with no quantitative reference is a sketch. The range here
+    # runs 4 to 1,785, so the short years are read off the label and the tall
+    # ones off the gridlines; both need to be there.
+    ceiling, step = axis_ceiling(max(commits))
+    scale = (M_BASE - M_TOP) / float(ceiling)
+    value = 0
+    while value <= ceiling:
+        gy = M_BASE - value * scale
+        out.append('<line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s" '
+                   'stroke-width="1"%s/>'
+                   % (f(M_PLOT_X0), f(gy), f(M_PLOT_X1), f(gy),
+                      p["border"] if not value else p["rule"],
+                      '' if not value else ' stroke-dasharray="2 4"'))
+        out.append('<text x="%s" y="%s" text-anchor="end" font-family="%s" '
+                   'font-size="8.5" fill="%s">%s</text>'
+                   % (f(M_PLOT_X0 - 8), f(gy + 3), MONO, p["faint"],
+                      esc(thousands(value))))
+        value += step
+
+    span = (M_PLOT_X1 - M_PLOT_X0) / len(years)
     for i, year in enumerate(years):
         row = d["commits_by_year"][year]
-        cx = M_LEFT + span * (i + 0.5)
+        cx = M_PLOT_X0 + span * (i + 0.5)
         mine, org = row["own"], row["organisation"]
-        h_mine, h_org = max(mine * scale, 2.0), org * scale
+        h_mine, h_org = max(mine * scale, 1.5), org * scale
         t0 = 0.90 + i * 0.16
-        out.append(grow_up(cx - 20, 40, h_mine, p["green"], t0,
-                           rx=2 if org else 3))
+        # Square off the joint when the column is stacked; only the top of a
+        # column should be rounded.
+        out.append(grow_up(cx - 17, 34, h_mine, p["green"], t0,
+                           rx=0 if org else 3))
         if org:
-            out.append(grow_up(cx - 20, 40, h_org, p["blue"], t0 + 0.14,
+            out.append(grow_up(cx - 17, 34, h_org, p["blue"], t0 + 0.14,
                                floor=M_BASE - h_mine))
         out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
                    'font-size="10" font-weight="700" fill="%s" opacity="0">%s%s</text>'
                    % (f(cx), f(M_BASE - h_mine - h_org - 7), MONO, p["fg"],
                       esc(thousands(row["commits"])), fade(t0 + 0.65, 0.12)))
-        out.append('<text x="%s" y="356" text-anchor="middle" font-family="%s" '
+        out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
                    'font-size="9.5" fill="%s">%s</text>'
-                   % (f(cx), MONO, p["faint"], esc(year)))
-    out.append('<text x="%s" y="372" text-anchor="middle" font-family="%s" '
+                   % (f(cx), f(M_BASE + 18), MONO, p["faint"], esc(year)))
+    out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
                'font-size="8.5" fill="%s">to %s</text>'
-               % (f(M_LEFT + span * (len(years) - 0.5)), SANS, p["faint"],
-                  esc(d["through_month"])))
+               % (f(M_PLOT_X0 + span * (len(years) - 0.5)), f(M_BASE + 32), SANS,
+                  p["faint"], esc(d["through_month"])))
 
     # -- repositories by primary language -----------------------------------
     out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
