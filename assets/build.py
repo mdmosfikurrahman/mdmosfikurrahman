@@ -428,7 +428,7 @@ def rooms(theme):
 #   and is absent from all of this. The 2022 figure is four commits for exactly
 #   that reason, and a panel claiming to measure should say so rather than crop.
 
-M_W, M_H = 900, 430
+M_W, M_H = 900, 448
 M_SPLIT = 450.0
 M_LEFT, M_RIGHT = 24.0, 470.0
 M_BASE, M_TOP = 340.0, 200.0         # column chart floor and ceiling
@@ -452,8 +452,9 @@ def thousands(n):
     return "{:,}".format(int(n))
 
 
-def grow_up(x, w, height, colour, t0, rx=3):
-    """A column that rises out of the baseline instead of appearing whole."""
+def grow_up(x, w, height, colour, t0, rx=3, floor=None):
+    """A column that rises out of its floor instead of appearing whole."""
+    floor = M_BASE if floor is None else floor
     keys = [0.0, t0, t0 + 0.55, DIM, RESET, LOOP]
     kt = ";".join(f(k / LOOP) for k in keys)
     return ('<rect x="%s" y="%s" width="%s" height="0" rx="%s" fill="%s">\n'
@@ -462,10 +463,10 @@ def grow_up(x, w, height, colour, t0, rx=3):
             '  <animate attributeName="y" dur="%gs" repeatCount="indefinite"'
             ' values="%s;%s;%s;%s;%s;%s" keyTimes="%s"/>\n'
             '</rect>'
-            % (f(x), f(M_BASE), f(w), rx, colour,
+            % (f(x), f(floor), f(w), rx, colour,
                LOOP, f(height), f(height), kt,
-               LOOP, f(M_BASE), f(M_BASE), f(M_BASE - height),
-               f(M_BASE - height), f(M_BASE), f(M_BASE), kt))
+               LOOP, f(floor), f(floor), f(floor - height),
+               f(floor - height), f(floor), f(floor), kt))
 
 
 def grow_right(x, y, width, height, colour, t0, rx=3):
@@ -492,6 +493,8 @@ def measured(theme):
     rows = [(k, primary.get(k, 0)) for k in LANG_SHOWN] + [("Other", other)]
     rows = [r for r in rows if r[1]]
     noisy = d["byte_share_top_language"]
+    org_from = next(y for y in years if d["commits_by_year"][y]["organisation"])
+    org_total = sum(d["commits_by_year"][y]["organisation"] for y in years)
 
     nice = datetime.strptime(d["generated"], "%Y-%m-%d").strftime("%d %B %Y")
 
@@ -511,10 +514,10 @@ def measured(theme):
 
     # -- standing figures ---------------------------------------------------
     stats = [(thousands(total_commits), "commits since %s" % years[0]),
+             (thousands(org_total), "in organisation repos"),
              (str(total_repos), "public repositories"),
              (str(primary.get("Java", 0)), "of them in Java"),
-             (str(primary.get("C#", 0)), "of them in C#"),
-             (str(len(primary)), "primary languages")]
+             (str(primary.get("C#", 0)), "of them in C#")]
     cell = 852.0 / len(stats)
     for i, (value, label) in enumerate(stats):
         cx = 24.0 + cell * (i + 0.5)
@@ -543,17 +546,36 @@ def measured(theme):
                'stroke-width="1"/>'
                % (f(M_LEFT), M_BASE, f(M_SPLIT - 20), M_BASE, p["border"]))
 
+    # Two series, because "where are the organisation commits" is the first
+    # question this chart should answer rather than quietly fold into a total.
+    cursor = M_SPLIT - 20.0
+    for tone, text in (("blue", "organisation"), ("green", "own")):
+        width = 11.0 + len(text) * 4.7
+        cursor -= width
+        out.append('<rect x="%s" y="170" width="8" height="8" rx="2" fill="%s"/>'
+                   % (f(cursor), p[tone]))
+        out.append('<text x="%s" y="177" font-family="%s" font-size="9" fill="%s">'
+                   '%s</text>' % (f(cursor + 11), SANS, p["faint"], esc(text)))
+        cursor -= 10.0
+
     span = (M_SPLIT - 20 - M_LEFT) / len(years)
     top_value = max(commits)
-    for i, (year, n) in enumerate(zip(years, commits)):
+    scale = (M_BASE - M_TOP) / float(top_value)
+    for i, year in enumerate(years):
+        row = d["commits_by_year"][year]
         cx = M_LEFT + span * (i + 0.5)
-        height = max((n / float(top_value)) * (M_BASE - M_TOP), 2.0)
+        mine, org = row["own"], row["organisation"]
+        h_mine, h_org = max(mine * scale, 2.0), org * scale
         t0 = 0.90 + i * 0.16
-        out.append(grow_up(cx - 20, 40, height, p["accent"], t0))
+        out.append(grow_up(cx - 20, 40, h_mine, p["green"], t0,
+                           rx=2 if org else 3))
+        if org:
+            out.append(grow_up(cx - 20, 40, h_org, p["blue"], t0 + 0.14,
+                               floor=M_BASE - h_mine))
         out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
                    'font-size="10" font-weight="700" fill="%s" opacity="0">%s%s</text>'
-                   % (f(cx), f(M_BASE - height - 7), MONO, p["fg"],
-                      esc(thousands(n)), fade(t0 + 0.5, 0.12)))
+                   % (f(cx), f(M_BASE - h_mine - h_org - 7), MONO, p["fg"],
+                      esc(thousands(row["commits"])), fade(t0 + 0.65, 0.12)))
         out.append('<text x="%s" y="356" text-anchor="middle" font-family="%s" '
                    'font-size="9.5" fill="%s">%s</text>'
                    % (f(cx), MONO, p["faint"], esc(year)))
@@ -584,18 +606,22 @@ def measured(theme):
                    % (f(y + 11), MONO, p["fg"], n, fade(t0 + 0.5, 0.12)))
 
     # -- what the numbers do not cover --------------------------------------
-    note = ('<g opacity="0">%s\n'
-            '  <text x="24" y="400" font-family="%s" font-size="9.5" fill="%s">'
-            'Counted by repository rather than by byte: notebooks store their own '
-            'output, which would put %s at %d%%%% of the account and hide '
-            'everything else.</text>\n'
-            '  <text x="24" y="415" font-family="%s" font-size="9.5" fill="%s">'
-            'Work done inside a company lives in private repositories and is not '
-            'here at all. That is why 2022, a full year of Java in production, '
-            'reads as four commits.</text>\n'
-            '</g>' % (fade(3.80), SANS, p["faint"], esc(noisy["language"]),
-                      noisy["percent"], SANS, p["faint"]))
-    out.append(note)
+    lines = [
+        "Commits include private organisation repositories from %s, when the "
+        "current employer's work moved onto GitHub. Counts only: no repository "
+        "name, description or content is read." % org_from,
+        "Code written for earlier employers never lived on this account, which is "
+        "why 2022, a full year of Java in production, reads as four commits.",
+        "Language shares are public repositories only, counted by repository "
+        "rather than by byte: %s stores its own rendered output and would "
+        "otherwise take %d%%%% of the account." % (esc(noisy["language"]),
+                                                   noisy["percent"]),
+    ]
+    out.append('<g opacity="0">%s\n%s\n</g>'
+               % (fade(3.90),
+                  indent(['<text x="24" y="%s" font-family="%s" font-size="9.5" '
+                          'fill="%s">%s</text>' % (398 + n * 15, SANS, p["faint"], t)
+                          for n, t in enumerate(lines)])))
 
     return """<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img"
      aria-label="%s">
@@ -607,19 +633,26 @@ def measured(theme):
 </svg>
 """ % (M_W, M_H, M_W, M_H,
        esc("A panel of figures read from the GitHub API on %s for the account %s. "
-           "%s commits since %s across %d public repositories, of which %d are "
-           "primarily Java and %d primarily C#, spanning %d primary languages. "
-           "Commits per year run %s. Public repositories by primary language run "
-           "%s. Counted by repository rather than by byte, because notebooks "
-           "store their own output and would otherwise account for most of the "
-           "total. Company work is in private repositories and is not included, "
-           "which is why 2022, a full year of Java in production, shows only four "
-           "commits."
-           % (nice, d["login"], thousands(total_commits), years[0], total_repos,
-              primary.get("Java", 0), primary.get("C#", 0), len(primary),
-              ", ".join("%s %s" % (y, thousands(n))
-                        for y, n in zip(years, commits)),
-              ", ".join("%s %d" % (k, n) for k, n in rows))),
+           "%s commits since %s, of which %s are in private organisation "
+           "repositories, across %d public repositories, of which %d are "
+           "primarily Java and %d primarily C#. Commits per year, split into own "
+           "and organisation repositories, run %s. Public repositories by primary "
+           "language run %s. Commits include private organisation repositories "
+           "from %s, when the current employer's work moved onto GitHub; only "
+           "counts are read, never a repository name, description or content. "
+           "Code written for earlier employers never lived on this account, which "
+           "is why 2022, a full year of Java in production, reads as four commits. "
+           "Language shares cover public repositories only and are counted by "
+           "repository rather than by byte, because notebooks store their own "
+           "rendered output."
+           % (nice, d["login"], thousands(total_commits), years[0],
+              thousands(org_total), total_repos, primary.get("Java", 0),
+              primary.get("C#", 0),
+              ", ".join("%s %s own and %s organisation"
+                        % (y, thousands(d["commits_by_year"][y]["own"]),
+                           thousands(d["commits_by_year"][y]["organisation"]))
+                        for y in years),
+              ", ".join("%s %d" % (k, n) for k, n in rows), org_from)),
        M_W - 1, M_H - 1, p["bg"], p["border"], indent(out))
 
 

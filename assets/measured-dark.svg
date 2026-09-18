@@ -1,76 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img"
-     aria-label="A panel of figures read from the GitHub API on 18 September 2026 for the account mdmosfikurrahman. 2,839 commits since 2021 across 56 public repositories, of which 24 are primarily Java and 7 primarily C#, spanning 9 primary languages. Commits per year run 2021 97, 2022 4, 2023 172, 2024 81, 2025 702, 2026 1,783. Public repositories by primary language run Java 24, C# 7, JavaScript 5, Jupyter Notebook 4, HTML 3, TeX 3, Other 5. Counted by repository rather than by byte, because notebooks store their own output and would otherwise account for most of the total. Company work is in private repositories and is not included, which is why 2022, a full year of Java in production, shows only four commits.">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="448" viewBox="0 0 900 448" role="img"
+     aria-label="A panel of figures read from the GitHub API on 18 September 2026 for the account mdmosfikurrahman. 2,840 commits since 2021, of which 1,876 are in private organisation repositories, across 56 public repositories, of which 24 are primarily Java and 7 primarily C#. Commits per year, split into own and organisation repositories, run 2021 97 own and 0 organisation, 2022 4 own and 0 organisation, 2023 172 own and 0 organisation, 2024 81 own and 0 organisation, 2025 246 own and 456 organisation, 2026 364 own and 1,420 organisation. Public repositories by primary language run Java 24, C# 7, JavaScript 5, Jupyter Notebook 4, HTML 3, TeX 3, Other 5. Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Language shares cover public repositories only and are counted by repository rather than by byte, because notebooks store their own rendered output.">
   <title>Public work, measured &#8212; read from the GitHub API</title>
 
-  <rect x="0.5" y="0.5" width="899" height="429" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <rect x="0.5" y="0.5" width="899" height="447" rx="10" fill="#0d1117" stroke="#30363d"/>
 
   <text x="24" y="34" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3">Public work, measured</text>
   <text x="24" y="54" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#6e7681">Nothing on this panel was typed by hand. Every figure is read straight from the GitHub API on 18 September 2026.</text>
   <text x="876" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#6e7681">gh api · mdmosfikurrahman</text>
   <line x1="24" y1="72" x2="876" y2="72" stroke="#30363d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.03;0.044;0.92;0.968;1"/>
-    <text x="109.2" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">2,839</text>
+    <text x="109.2" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">2,840</text>
     <text x="109.2" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">COMMITS SINCE 2021</text>
   </g>
   <line x1="194.4" y1="88" x2="194.4" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.039;0.053;0.92;0.968;1"/>
-    <text x="279.6" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">56</text>
-    <text x="279.6" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">PUBLIC REPOSITORIES</text>
+    <text x="279.6" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">1,876</text>
+    <text x="279.6" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">IN ORGANISATION REPOS</text>
   </g>
   <line x1="364.8" y1="88" x2="364.8" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.048;0.062;0.92;0.968;1"/>
-    <text x="450" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">24</text>
-    <text x="450" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM IN JAVA</text>
+    <text x="450" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">56</text>
+    <text x="450" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">PUBLIC REPOSITORIES</text>
   </g>
   <line x1="535.2" y1="88" x2="535.2" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.057;0.071;0.92;0.968;1"/>
-    <text x="620.4" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">7</text>
-    <text x="620.4" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM IN C#</text>
+    <text x="620.4" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">24</text>
+    <text x="620.4" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM IN JAVA</text>
   </g>
   <line x1="705.6" y1="88" x2="705.6" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.066;0.08;0.92;0.968;1"/>
-    <text x="790.8" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">9</text>
-    <text x="790.8" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">PRIMARY LANGUAGES</text>
+    <text x="790.8" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">7</text>
+    <text x="790.8" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM IN C#</text>
   </g>
   <line x1="24" y1="148" x2="876" y2="148" stroke="#30363d" stroke-width="1"/>
   <line x1="450" y1="164" x2="450" y2="380" stroke="#21262d" stroke-width="1"/>
   <text x="24" y="176" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.1" fill="#6e7681">COMMITS PER YEAR</text>
   <line x1="24" y1="340.0" x2="430" y2="340.0" stroke="#30363d" stroke-width="1"/>
-  <rect x="37.833" y="340" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;7.616;7.616;0;0" keyTimes="0;0.09;0.145;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;332.384;332.384;340;340" keyTimes="0;0.09;0.145;0.92;0.968;1"/>
+  <rect x="362.6" y="170" width="8" height="8" rx="2" fill="#58a6ff"/>
+  <text x="373.6" y="177" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#6e7681">organisation</text>
+  <rect x="327.5" y="170" width="8" height="8" rx="2" fill="#3fb950"/>
+  <text x="338.5" y="177" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#6e7681">own</text>
+  <rect x="37.833" y="340" width="40" height="0" rx="3" fill="#3fb950">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;7.612;7.612;0;0" keyTimes="0;0.09;0.145;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;332.388;332.388;340;340" keyTimes="0;0.09;0.145;0.92;0.968;1"/>
   </rect>
-  <text x="57.833" y="325.384" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">97<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.14;0.152;0.92;0.968;1"/></text>
+  <text x="57.833" y="325.388" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">97<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.155;0.167;0.92;0.968;1"/></text>
   <text x="57.833" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2021</text>
-  <rect x="105.5" y="340" width="40" height="0" rx="3" fill="#58a6ff">
+  <rect x="105.5" y="340" width="40" height="0" rx="3" fill="#3fb950">
     <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;2;2;0;0" keyTimes="0;0.106;0.161;0.92;0.968;1"/>
     <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;338;338;340;340" keyTimes="0;0.106;0.161;0.92;0.968;1"/>
   </rect>
-  <text x="125.5" y="331" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">4<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.156;0.168;0.92;0.968;1"/></text>
+  <text x="125.5" y="331" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">4<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.171;0.183;0.92;0.968;1"/></text>
   <text x="125.5" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2022</text>
-  <rect x="173.167" y="340" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;13.505;13.505;0;0" keyTimes="0;0.122;0.177;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;326.495;326.495;340;340" keyTimes="0;0.122;0.177;0.92;0.968;1"/>
+  <rect x="173.167" y="340" width="40" height="0" rx="3" fill="#3fb950">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;13.498;13.498;0;0" keyTimes="0;0.122;0.177;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;326.502;326.502;340;340" keyTimes="0;0.122;0.177;0.92;0.968;1"/>
   </rect>
-  <text x="193.167" y="319.495" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">172<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.172;0.184;0.92;0.968;1"/></text>
+  <text x="193.167" y="319.502" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">172<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.187;0.199;0.92;0.968;1"/></text>
   <text x="193.167" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2023</text>
-  <rect x="240.833" y="340" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;6.36;6.36;0;0" keyTimes="0;0.138;0.193;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;333.64;333.64;340;340" keyTimes="0;0.138;0.193;0.92;0.968;1"/>
+  <rect x="240.833" y="340" width="40" height="0" rx="3" fill="#3fb950">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;6.357;6.357;0;0" keyTimes="0;0.138;0.193;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;333.643;333.643;340;340" keyTimes="0;0.138;0.193;0.92;0.968;1"/>
   </rect>
-  <text x="260.833" y="326.64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">81<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.188;0.2;0.92;0.968;1"/></text>
+  <text x="260.833" y="326.643" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">81<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.203;0.215;0.92;0.968;1"/></text>
   <text x="260.833" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2024</text>
-  <rect x="308.5" y="340" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;55.121;55.121;0;0" keyTimes="0;0.154;0.209;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;284.879;284.879;340;340" keyTimes="0;0.154;0.209;0.92;0.968;1"/>
+  <rect x="308.5" y="340" width="40" height="0" rx="2" fill="#3fb950">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;19.305;19.305;0;0" keyTimes="0;0.154;0.209;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;320.695;320.695;340;340" keyTimes="0;0.154;0.209;0.92;0.968;1"/>
   </rect>
-  <text x="328.5" y="277.879" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">702<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.204;0.216;0.92;0.968;1"/></text>
+  <rect x="308.5" y="320.695" width="40" height="0" rx="3" fill="#58a6ff">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;35.785;35.785;0;0" keyTimes="0;0.168;0.223;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="320.695;320.695;284.91;284.91;320.695;320.695" keyTimes="0;0.168;0.223;0.92;0.968;1"/>
+  </rect>
+  <text x="328.5" y="277.91" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">702<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.219;0.231;0.92;0.968;1"/></text>
   <text x="328.5" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2025</text>
-  <rect x="376.167" y="340" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;140;140;0;0" keyTimes="0;0.17;0.225;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;200;200;340;340" keyTimes="0;0.17;0.225;0.92;0.968;1"/>
+  <rect x="376.167" y="340" width="40" height="0" rx="2" fill="#3fb950">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;28.565;28.565;0;0" keyTimes="0;0.17;0.225;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;311.435;311.435;340;340" keyTimes="0;0.17;0.225;0.92;0.968;1"/>
   </rect>
-  <text x="396.167" y="193" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,783<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.22;0.232;0.92;0.968;1"/></text>
+  <rect x="376.167" y="311.435" width="40" height="0" rx="3" fill="#58a6ff">
+    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;111.435;111.435;0;0" keyTimes="0;0.184;0.239;0.92;0.968;1"/>
+    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="311.435;311.435;200;200;311.435;311.435" keyTimes="0;0.184;0.239;0.92;0.968;1"/>
+  </rect>
+  <text x="396.167" y="193" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,784<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.235;0.247;0.92;0.968;1"/></text>
   <text x="396.167" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2026</text>
   <text x="396.167" y="372" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" fill="#6e7681">to September</text>
   <text x="470" y="176" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.1" fill="#6e7681">PUBLIC REPOSITORIES BY PRIMARY LANGUAGE</text>
@@ -109,8 +121,9 @@
     <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;48.333;48.333;0;0" keyTimes="0;0.309;0.364;0.92;0.968;1"/>
   </rect>
   <text x="876" y="355" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">5<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.359;0.371;0.92;0.968;1"/></text>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.38;0.396;0.92;0.968;1"/>
-    <text x="24" y="400" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Counted by repository rather than by byte: notebooks store their own output, which would put Jupyter Notebook at 83%% of the account and hide everything else.</text>
-    <text x="24" y="415" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Work done inside a company lives in private repositories and is not here at all. That is why 2022, a full year of Java in production, reads as four commits.</text>
+  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.39;0.406;0.92;0.968;1"/>
+    <text x="24" y="398" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub. Counts only: no repository name, description or content is read.</text>
+    <text x="24" y="413" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits.</text>
+    <text x="24" y="428" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Language shares are public repositories only, counted by repository rather than by byte: Jupyter Notebook stores its own rendered output and would otherwise take 82%% of the account.</text>
   </g>
 </svg>

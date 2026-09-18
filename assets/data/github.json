@@ -1,32 +1,44 @@
 {
   "byte_share_top_language": {
     "language": "Jupyter Notebook",
-    "percent": 83
+    "percent": 82
   },
   "commits_by_year": {
     "2021": {
       "commits": 97,
-      "repositories": 6
+      "organisation": 0,
+      "organisation_repositories": 0,
+      "own": 97
     },
     "2022": {
       "commits": 4,
-      "repositories": 1
+      "organisation": 0,
+      "organisation_repositories": 0,
+      "own": 4
     },
     "2023": {
       "commits": 172,
-      "repositories": 12
+      "organisation": 0,
+      "organisation_repositories": 0,
+      "own": 172
     },
     "2024": {
       "commits": 81,
-      "repositories": 9
+      "organisation": 0,
+      "organisation_repositories": 0,
+      "own": 81
     },
     "2025": {
       "commits": 702,
-      "repositories": 34
+      "organisation": 456,
+      "organisation_repositories": 5,
+      "own": 246
     },
     "2026": {
-      "commits": 1783,
-      "repositories": 49
+      "commits": 1784,
+      "organisation": 1420,
+      "organisation_repositories": 30,
+      "own": 364
     }
   },
   "generated": "2026-09-18",

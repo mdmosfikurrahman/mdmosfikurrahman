@@ -63,12 +63,18 @@ def main():
         if i % 10 == 0 or i == len(own):
             print("  %d/%d" % (i, len(own)))
 
+    # Authenticated as the account itself, so private organisation repositories
+    # are visible and their commits are counted. Only the counts are taken: the
+    # per-repository rows are split into own versus organisation and discarded.
     print("counting commit contributions by year ...")
     query = """query($login:String!, $from:DateTime!, $to:DateTime!) {
       user(login:$login) {
         contributionsCollection(from:$from, to:$to) {
           totalCommitContributions
-          totalRepositoriesWithContributedCommits
+          commitContributionsByRepository(maxRepositories: 100) {
+            repository { isPrivate owner { login } }
+            contributions { totalCount }
+          }
         }
       }
     }"""
@@ -78,11 +84,22 @@ def main():
         c = gh("api", "graphql", "-f", "query=" + query, "-f", "login=" + LOGIN,
                "-f", "from=%d-01-01T00:00:00Z" % year,
                "-f", "to=%d-12-31T23:59:59Z" % year)["data"]["user"]["contributionsCollection"]
+        mine = org = org_repos = 0
+        for row in c["commitContributionsByRepository"]:
+            n = row["contributions"]["totalCount"]
+            if row["repository"]["owner"]["login"] == LOGIN:
+                mine += n
+            else:
+                org += n
+                org_repos += 1
         commits[str(year)] = {
             "commits": c["totalCommitContributions"],
-            "repositories": c["totalRepositoriesWithContributedCommits"],
+            "own": mine,
+            "organisation": org,
+            "organisation_repositories": org_repos,
         }
-        print("  %d  %5d commits" % (year, c["totalCommitContributions"]))
+        print("  %d  %5d total  %5d own  %5d organisation (%d repos)"
+              % (year, c["totalCommitContributions"], mine, org, org_repos))
 
     total_bytes = sum(bytes_by_language.values())
     snapshot = {
