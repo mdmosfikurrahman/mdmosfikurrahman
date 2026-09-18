@@ -1,0 +1,56 @@
+{
+  "byte_share_top_language": {
+    "language": "Jupyter Notebook",
+    "percent": 83
+  },
+  "commits_by_year": {
+    "2021": {
+      "commits": 97,
+      "repositories": 6
+    },
+    "2022": {
+      "commits": 4,
+      "repositories": 1
+    },
+    "2023": {
+      "commits": 172,
+      "repositories": 12
+    },
+    "2024": {
+      "commits": 81,
+      "repositories": 9
+    },
+    "2025": {
+      "commits": 702,
+      "repositories": 34
+    },
+    "2026": {
+      "commits": 1783,
+      "repositories": 49
+    }
+  },
+  "generated": "2026-09-18",
+  "login": "mdmosfikurrahman",
+  "repositories": {
+    "by_primary_language": {
+      "C#": 7,
+      "C++": 2,
+      "CSS": 2,
+      "HTML": 3,
+      "Java": 24,
+      "JavaScript": 5,
+      "Jupyter Notebook": 4,
+      "Python": 1,
+      "TeX": 3
+    },
+    "created_by_year": {
+      "2021": 6,
+      "2023": 9,
+      "2024": 14,
+      "2025": 23,
+      "2026": 4
+    },
+    "total": 56
+  },
+  "through_month": "September"
+}

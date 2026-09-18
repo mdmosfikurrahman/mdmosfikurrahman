@@ -8,18 +8,25 @@ GitHub proxies these through camo, where scripts never execute but declarative
 animation does. Both themes come out of one palette swap and are selected in the
 README with <picture media="(prefers-color-scheme: ...)">.
 
-Emits `career-dark.svg` and `career-light.svg` — a composed panel rather than a
-bare chart: a header lockup with a year readout that ticks through the stack
-actually in hand at the time, a band of standing figures, then eight years of
-education, research and three employers on one axis. Work still running does not
-get a hard right edge; it fades into the future it has not finished yet.
+Two panels, one visual language. Both are about a person rather than a product.
+
+    career-*.svg   eight years on one axis. A header lockup with a year readout
+                   that ticks through the stack actually in hand at the time, a
+                   band of standing figures, then education, research and three
+                   employers. Work still running gets no hard right edge; it
+                   fades into the future it has not finished yet.
+
+    rooms-*.svg    the three places the job was actually learned, as a triptych:
+                   what each one refused to let through, and what that taught.
 
 There were charts of the platform at work as well, and they were good, but the
 page they sat on is meant to be about a person rather than a portfolio, so they
 came out again. `git log --diff-filter=D assets/` has them if they are wanted.
 """
 
+import json
 import os
+from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -157,8 +164,8 @@ def career(theme):
                 'font-weight="700" fill="%s">Two threads, one instinct</text>'
                 % (SANS, p["fg"]))
     base.append('<text x="24" y="54" font-family="%s" font-size="10.5" fill="%s">'
-                'Production engineering and applied research in parallel since 2018 '
-                '— Java, .NET and Python, three companies, ten papers.</text>'
+                'Production engineering and applied research in parallel since 2018. '
+                'Java, .NET and Python, three companies, ten papers.</text>'
                 % (SANS, p["faint"]))
 
     frames = [(at(y), at(y + 1), str(y)) for y, _ in YEARS]
@@ -315,13 +322,316 @@ def career(theme):
        indent([play]))
 
 
+# =============================================================== three rooms ==
+#
+# The timeline says when. This says where it was actually learned, which is the
+# part a list of employers never carries. Each room refused to let something
+# through, and the refusal is the lesson.
+
+R_W, R_H = 900, 300
+R_COLS = [24.0, 316.0, 608.0]
+R_COL_W = 268.0
+
+ROOMS = [
+    ("A Japanese review process", "BJIT Group, 2022–2023",
+     ["Every change read by people who would not let it",
+      "through for reasons I had never thought to check."],
+     ["The reviewer is a user of your code, and the",
+      "most expensive one to disappoint."]),
+    ("A government office", "REVE Systems, 2023–2024",
+     ["Customs compliance for exporters who would be",
+      "audited on whatever the system printed."],
+     ["Correctness is not a quality you add later.",
+      "On some systems it is the entire product."]),
+    ("An empty repository", "Akij iBOS, 2024 to now",
+     ["No prior art, ten engineers waiting, and three",
+      "clients arriving before the second release."],
+     ["Architecture is only the decisions that are",
+      "expensive to undo. Make those ones slowly."]),
+]
+
+
+def rooms(theme):
+    p = PALETTES[theme]
+    out = []
+
+    out.append('<text x="24" y="34" font-family="%s" font-size="15" '
+               'font-weight="700" fill="%s">Three rooms</text>' % (SANS, p["fg"]))
+    out.append('<text x="24" y="54" font-family="%s" font-size="10.5" fill="%s">'
+               'Nobody handed me this. What I know about building software I learned '
+               'in three places that disagreed with each other.</text>'
+               % (SANS, p["faint"]))
+    out.append('<text x="876" y="34" text-anchor="end" font-family="%s" '
+               'font-size="10.5" fill="%s">2022 to now</text>' % (MONO, p["faint"]))
+    out.append('<line x1="24" y1="72" x2="876" y2="72" stroke="%s" stroke-width="1"/>'
+               % p["border"])
+
+    for i, (name, where, constraint, lesson) in enumerate(ROOMS):
+        x = R_COLS[i]
+        t0 = 0.55 + i * 1.20
+        if i:
+            out.append('<line x1="%s" y1="92" x2="%s" y2="286" stroke="%s" '
+                       'stroke-width="1"/>' % (f(x - 16), f(x - 16), p["rule"]))
+
+        out.append('<g opacity="0">%s\n'
+                   '  <text x="%s" y="104" font-family="%s" font-size="11" '
+                   'font-weight="700" letter-spacing="1.4" fill="%s">%02d</text>\n'
+                   '  <text x="%s" y="128" font-family="%s" font-size="13.5" '
+                   'font-weight="700" fill="%s">%s</text>\n'
+                   '  <text x="%s" y="144" font-family="%s" font-size="9.5" '
+                   'fill="%s">%s</text>\n'
+                   '  <rect x="%s" y="156" width="36" height="2" rx="1" fill="%s"/>\n'
+                   '</g>'
+                   % (fade(t0, 0.14), f(x), MONO, p["accent"], i + 1,
+                      f(x), SANS, p["fg"], esc(name),
+                      f(x), SANS, p["faint"], esc(where),
+                      f(x), p["accent"]))
+
+        for k, (label, lines, colour, base_y) in enumerate((
+                ("What it would not allow", constraint, p["muted"], 184.0),
+                ("What that taught", lesson, p["fg"], 246.0))):
+            block = ['<text x="%s" y="%s" font-family="%s" font-size="8.5" '
+                     'font-weight="700" letter-spacing="1.1" fill="%s">%s</text>'
+                     % (f(x), f(base_y), SANS, p["faint"], esc(label.upper()))]
+            for n, line in enumerate(lines):
+                block.append('<text x="%s" y="%s" font-family="%s" font-size="10.5" '
+                             'fill="%s">%s</text>'
+                             % (f(x), f(base_y + 18 + n * 15), SANS, colour,
+                                esc(line)))
+            out.append('<g opacity="0">%s\n%s\n</g>'
+                       % (fade(t0 + 0.30 + k * 0.30, 0.14), indent(block)))
+
+    return """<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img"
+     aria-label="Three rooms where the work was learned. One, a Japanese review process at BJIT Group between 2022 and 2023: every change was read by people who would not let it through for reasons the author had never thought to check, which taught that the reviewer is a user of your code and the most expensive one to disappoint. Two, a government office at REVE Systems between 2023 and 2024: customs compliance for exporters who would be audited on whatever the system printed, which taught that correctness is not a quality you add later and on some systems it is the entire product. Three, an empty repository at Akij iBOS from 2024 to now: no prior art, ten engineers waiting and three clients arriving before the second release, which taught that architecture is only the decisions that are expensive to undo, so those ones should be made slowly.">
+  <title>Three rooms &#8212; where the job was actually learned</title>
+
+  <rect x="0.5" y="0.5" width="%s" height="%s" rx="10" fill="%s" stroke="%s"/>
+
+%s
+</svg>
+""" % (R_W, R_H, R_W, R_H, R_W - 1, R_H - 1, p["bg"], p["border"], indent(out))
+
+
+# ============================================================ measured panel ==
+#
+# The only panel here that nobody wrote by hand. Every figure is read out of
+# assets/data/github.json, which assets/fetch.py pulls from the GitHub API.
+#
+# Two methodology calls worth defending, because both change the answer:
+#
+#   Repositories, not bytes. Jupyter notebooks store their rendered output in
+#   the file, so 83% of the account's bytes are one notebook's plots. Counting
+#   repositories by primary language gives Java 24 to C# 7, which is the true
+#   shape; counting bytes gives Jupyter 84%, which is an artefact.
+#
+#   Public only, and said out loud. Company work sits in private repositories
+#   and is absent from all of this. The 2022 figure is four commits for exactly
+#   that reason, and a panel claiming to measure should say so rather than crop.
+
+M_W, M_H = 900, 430
+M_SPLIT = 450.0
+M_LEFT, M_RIGHT = 24.0, 470.0
+M_BASE, M_TOP = 340.0, 200.0         # column chart floor and ceiling
+M_BAR_Y, M_BAR_H = 200.0, 24.0       # language rows
+
+LANG_TONE = {"Java": "orange", "C#": "blue", "JavaScript": "yellow",
+             "Jupyter Notebook": "purple", "TeX": "faint", "HTML": "faint",
+             "Other": "faint"}
+LANG_SHOWN = ["Java", "C#", "JavaScript", "Jupyter Notebook", "HTML", "TeX"]
+
+
+def snapshot():
+    path = os.path.join(HERE, "data", "github.json")
+    if not os.path.exists(path):
+        raise SystemExit("missing %s — run `python assets/fetch.py` first" % path)
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def thousands(n):
+    return "{:,}".format(int(n))
+
+
+def grow_up(x, w, height, colour, t0, rx=3):
+    """A column that rises out of the baseline instead of appearing whole."""
+    keys = [0.0, t0, t0 + 0.55, DIM, RESET, LOOP]
+    kt = ";".join(f(k / LOOP) for k in keys)
+    return ('<rect x="%s" y="%s" width="%s" height="0" rx="%s" fill="%s">\n'
+            '  <animate attributeName="height" dur="%gs" repeatCount="indefinite"'
+            ' values="0;0;%s;%s;0;0" keyTimes="%s"/>\n'
+            '  <animate attributeName="y" dur="%gs" repeatCount="indefinite"'
+            ' values="%s;%s;%s;%s;%s;%s" keyTimes="%s"/>\n'
+            '</rect>'
+            % (f(x), f(M_BASE), f(w), rx, colour,
+               LOOP, f(height), f(height), kt,
+               LOOP, f(M_BASE), f(M_BASE), f(M_BASE - height),
+               f(M_BASE - height), f(M_BASE), f(M_BASE), kt))
+
+
+def grow_right(x, y, width, height, colour, t0, rx=3):
+    keys = [0.0, t0, t0 + 0.55, DIM, RESET, LOOP]
+    return ('<rect x="%s" y="%s" width="0" height="%s" rx="%s" fill="%s">\n'
+            '  <animate attributeName="width" dur="%gs" repeatCount="indefinite"'
+            ' values="0;0;%s;%s;0;0" keyTimes="%s"/>\n'
+            '</rect>'
+            % (f(x), f(y), f(height), rx, colour, LOOP, f(width), f(width),
+               ";".join(f(k / LOOP) for k in keys)))
+
+
+def measured(theme):
+    p = PALETTES[theme]
+    d = snapshot()
+    out = []
+
+    years = sorted(d["commits_by_year"])
+    commits = [d["commits_by_year"][y]["commits"] for y in years]
+    total_commits = sum(commits)
+    total_repos = d["repositories"]["total"]
+    primary = d["repositories"]["by_primary_language"]
+    other = sum(v for k, v in primary.items() if k not in LANG_SHOWN)
+    rows = [(k, primary.get(k, 0)) for k in LANG_SHOWN] + [("Other", other)]
+    rows = [r for r in rows if r[1]]
+    noisy = d["byte_share_top_language"]
+
+    nice = datetime.strptime(d["generated"], "%Y-%m-%d").strftime("%d %B %Y")
+
+    # -- header -------------------------------------------------------------
+    out.append('<text x="24" y="34" font-family="%s" font-size="15" '
+               'font-weight="700" fill="%s">Public work, measured</text>'
+               % (SANS, p["fg"]))
+    out.append('<text x="24" y="54" font-family="%s" font-size="10.5" fill="%s">'
+               'Nothing on this panel was typed by hand. Every figure is read '
+               'straight from the GitHub API on %s.</text>'
+               % (SANS, p["faint"], esc(nice)))
+    out.append('<text x="876" y="34" text-anchor="end" font-family="%s" '
+               'font-size="10.5" fill="%s">gh api · %s</text>'
+               % (MONO, p["faint"], esc(d["login"])))
+    out.append('<line x1="24" y1="72" x2="876" y2="72" stroke="%s" '
+               'stroke-width="1"/>' % p["border"])
+
+    # -- standing figures ---------------------------------------------------
+    stats = [(thousands(total_commits), "commits since %s" % years[0]),
+             (str(total_repos), "public repositories"),
+             (str(primary.get("Java", 0)), "of them in Java"),
+             (str(primary.get("C#", 0)), "of them in C#"),
+             (str(len(primary)), "primary languages")]
+    cell = 852.0 / len(stats)
+    for i, (value, label) in enumerate(stats):
+        cx = 24.0 + cell * (i + 0.5)
+        if i:
+            out.append('<line x1="%s" y1="88" x2="%s" y2="132" stroke="%s" '
+                       'stroke-width="1"/>'
+                       % (f(24.0 + cell * i), f(24.0 + cell * i), p["rule"]))
+        out.append('<g opacity="0">%s\n'
+                   '  <text x="%s" y="112" text-anchor="middle" font-family="%s" '
+                   'font-size="18" font-weight="700" fill="%s">%s</text>\n'
+                   '  <text x="%s" y="126" text-anchor="middle" font-family="%s" '
+                   'font-size="9" letter-spacing="0.4" fill="%s">%s</text>\n'
+                   '</g>'
+                   % (fade(0.30 + i * 0.09, 0.14), f(cx), MONO, p["fg"], esc(value),
+                      f(cx), SANS, p["faint"], esc(label.upper())))
+    out.append('<line x1="24" y1="148" x2="876" y2="148" stroke="%s" '
+               'stroke-width="1"/>' % p["border"])
+    out.append('<line x1="%s" y1="164" x2="%s" y2="380" stroke="%s" '
+               'stroke-width="1"/>' % (f(M_SPLIT), f(M_SPLIT), p["rule"]))
+
+    # -- commits per year ---------------------------------------------------
+    out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
+               'font-weight="700" letter-spacing="1.1" fill="%s">COMMITS PER YEAR'
+               '</text>' % (f(M_LEFT), SANS, p["faint"]))
+    out.append('<line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s" '
+               'stroke-width="1"/>'
+               % (f(M_LEFT), M_BASE, f(M_SPLIT - 20), M_BASE, p["border"]))
+
+    span = (M_SPLIT - 20 - M_LEFT) / len(years)
+    top_value = max(commits)
+    for i, (year, n) in enumerate(zip(years, commits)):
+        cx = M_LEFT + span * (i + 0.5)
+        height = max((n / float(top_value)) * (M_BASE - M_TOP), 2.0)
+        t0 = 0.90 + i * 0.16
+        out.append(grow_up(cx - 20, 40, height, p["accent"], t0))
+        out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
+                   'font-size="10" font-weight="700" fill="%s" opacity="0">%s%s</text>'
+                   % (f(cx), f(M_BASE - height - 7), MONO, p["fg"],
+                      esc(thousands(n)), fade(t0 + 0.5, 0.12)))
+        out.append('<text x="%s" y="356" text-anchor="middle" font-family="%s" '
+                   'font-size="9.5" fill="%s">%s</text>'
+                   % (f(cx), MONO, p["faint"], esc(year)))
+    out.append('<text x="%s" y="372" text-anchor="middle" font-family="%s" '
+               'font-size="8.5" fill="%s">to %s</text>'
+               % (f(M_LEFT + span * (len(years) - 0.5)), SANS, p["faint"],
+                  esc(d["through_month"])))
+
+    # -- repositories by primary language -----------------------------------
+    out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
+               'font-weight="700" letter-spacing="1.1" fill="%s">'
+               'PUBLIC REPOSITORIES BY PRIMARY LANGUAGE</text>'
+               % (f(M_RIGHT), SANS, p["faint"]))
+
+    gutter, bar_x = 106.0, M_RIGHT + 106.0
+    widest = max(n for _, n in rows)
+    for i, (lang, n) in enumerate(rows):
+        y = M_BAR_Y + i * M_BAR_H
+        t0 = 2.25 + i * 0.14
+        out.append('<text x="%s" y="%s" font-family="%s" font-size="10" '
+                   'fill="%s" opacity="0">%s%s</text>'
+                   % (f(M_RIGHT), f(y + 11), SANS, p["muted"], esc(lang),
+                      fade(t0, 0.12)))
+        out.append(grow_right(bar_x, y + 3, (n / float(widest)) * 232.0, 12,
+                              p[LANG_TONE.get(lang, "faint")], t0))
+        out.append('<text x="876" y="%s" text-anchor="end" font-family="%s" '
+                   'font-size="10" font-weight="700" fill="%s" opacity="0">%d%s</text>'
+                   % (f(y + 11), MONO, p["fg"], n, fade(t0 + 0.5, 0.12)))
+
+    # -- what the numbers do not cover --------------------------------------
+    note = ('<g opacity="0">%s\n'
+            '  <text x="24" y="400" font-family="%s" font-size="9.5" fill="%s">'
+            'Counted by repository rather than by byte: notebooks store their own '
+            'output, which would put %s at %d%%%% of the account and hide '
+            'everything else.</text>\n'
+            '  <text x="24" y="415" font-family="%s" font-size="9.5" fill="%s">'
+            'Work done inside a company lives in private repositories and is not '
+            'here at all. That is why 2022, a full year of Java in production, '
+            'reads as four commits.</text>\n'
+            '</g>' % (fade(3.80), SANS, p["faint"], esc(noisy["language"]),
+                      noisy["percent"], SANS, p["faint"]))
+    out.append(note)
+
+    return """<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img"
+     aria-label="%s">
+  <title>Public work, measured &#8212; read from the GitHub API</title>
+
+  <rect x="0.5" y="0.5" width="%s" height="%s" rx="10" fill="%s" stroke="%s"/>
+
+%s
+</svg>
+""" % (M_W, M_H, M_W, M_H,
+       esc("A panel of figures read from the GitHub API on %s for the account %s. "
+           "%s commits since %s across %d public repositories, of which %d are "
+           "primarily Java and %d primarily C#, spanning %d primary languages. "
+           "Commits per year run %s. Public repositories by primary language run "
+           "%s. Counted by repository rather than by byte, because notebooks "
+           "store their own output and would otherwise account for most of the "
+           "total. Company work is in private repositories and is not included, "
+           "which is why 2022, a full year of Java in production, shows only four "
+           "commits."
+           % (nice, d["login"], thousands(total_commits), years[0], total_repos,
+              primary.get("Java", 0), primary.get("C#", 0), len(primary),
+              ", ".join("%s %s" % (y, thousands(n))
+                        for y, n in zip(years, commits)),
+              ", ".join("%s %d" % (k, n) for k, n in rows))),
+       M_W - 1, M_H - 1, p["bg"], p["border"], indent(out))
+
+
 def main():
     for theme in ("dark", "light"):
-        path = os.path.join(HERE, "career-%s.svg" % theme)
-        with open(path, "w", encoding="utf-8", newline="\n") as fh:
-            fh.write(career(theme))
-        print("wrote %-20s %6d bytes" % (os.path.basename(path),
-                                         os.path.getsize(path)))
+        for name, fn in (("career", career), ("rooms", rooms),
+                         ("measured", measured)):
+            path = os.path.join(HERE, "%s-%s.svg" % (name, theme))
+            with open(path, "w", encoding="utf-8", newline="\n") as fh:
+                fh.write(fn(theme))
+            print("wrote %-20s %6d bytes" % (os.path.basename(path),
+                                             os.path.getsize(path)))
 
 
 if __name__ == "__main__":
