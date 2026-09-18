@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="448" viewBox="0 0 900 448" role="img"
-     aria-label="A panel of figures read from the GitHub API on 18 September 2026 for the account mdmosfikurrahman. 2,841 commits since 2021, of which 1,876 are in private organisation repositories, across 97 repositories committed to, 56 of them public, in 10 languages. Commits per year, split into own and organisation repositories, run 2021 97 own and 0 organisation, 2022 4 own and 0 organisation, 2023 172 own and 0 organisation, 2024 81 own and 0 organisation, 2025 246 own and 456 organisation, 2026 365 own and 1,420 organisation. Commits by the primary language of the repository, with the number of repositories in brackets, run C# 1,044 (17), TypeScript 954 (4), Java 288 (25), TeX 103 (3), Jupyter Notebook 81 (3), Python 69 (3), Other 97 (13). Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Languages are ranked by commits rather than by how many repositories were started, which would read Java 25 to C# 17, and not by bytes, where notebooks alone take most of the account because they store their own rendered output.">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="464" viewBox="0 0 900 464" role="img"
+     aria-label="A panel of figures read from the GitHub API on 18 September 2026 for the account mdmosfikurrahman. 2,843 commits since 2021, of which 1,876 are in private organisation repositories, across 97 repositories committed to, 56 of them public, in 10 languages. Commits per year, split into own and organisation repositories, run 2021 97 own and 0 organisation, 2022 4 own and 0 organisation, 2023 172 own and 0 organisation, 2024 81 own and 0 organisation, 2025 246 own and 456 organisation, 2026 367 own and 1,420 organisation. Commits by the primary language of the repository, with the number of repositories in brackets, run C# 1,044 (17), TypeScript 954 (4), Java 288 (25), TeX 103 (3), Jupyter Notebook 81 (3), Python 71 (3), Other 97 (13). Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Languages are ranked by commits rather than by how many repositories were started, which would read Java 25 to C# 17, and not by bytes, where notebooks alone take most of the account because they store their own rendered output.">
   <title>Public work, measured &#8212; read from the GitHub API</title>
 
-  <rect x="0.5" y="0.5" width="899" height="447" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <rect x="0.5" y="0.5" width="899" height="463" rx="10" fill="#0d1117" stroke="#30363d"/>
 
   <text x="24" y="34" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3">Public work, measured</text>
   <text x="24" y="54" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#6e7681">Nothing on this panel was typed by hand. Every figure is read straight from the GitHub API on 18 September 2026.</text>
   <text x="876" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#6e7681">gh api · mdmosfikurrahman</text>
   <line x1="24" y1="72" x2="876" y2="72" stroke="#30363d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.046;0.068;1"/>
-    <text x="109.2" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">2,841</text>
+    <text x="109.2" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">2,843</text>
     <text x="109.2" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">COMMITS SINCE 2021</text>
   </g>
   <line x1="194.4" y1="88" x2="194.4" y2="132" stroke="#21262d" stroke-width="1"/>
@@ -19,13 +19,13 @@
   </g>
   <line x1="364.8" y1="88" x2="364.8" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.074;0.095;1"/>
-    <text x="450" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">97</text>
-    <text x="450" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">REPOSITORIES TOUCHED</text>
+    <text x="450" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">183</text>
+    <text x="450" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">AUTHORED, NOT COUNTED</text>
   </g>
   <line x1="535.2" y1="88" x2="535.2" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.088;0.109;1"/>
-    <text x="620.4" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">56</text>
-    <text x="620.4" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM PUBLIC</text>
+    <text x="620.4" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">97</text>
+    <text x="620.4" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">REPOSITORIES TOUCHED</text>
   </g>
   <line x1="705.6" y1="88" x2="705.6" y2="132" stroke="#21262d" stroke-width="1"/>
   <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.102;0.123;1"/>
@@ -84,14 +84,14 @@
   <text x="338" y="283.754" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">702<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.337;0.355;1"/></text>
   <text x="338" y="360" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2025</text>
   <rect x="382.333" y="342" width="34" height="0" rx="0" fill="#3fb950">
-    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;26.645;26.645" keyTimes="0;0.262;0.346;1"/>
-    <animate attributeName="y" dur="6.5s" fill="freeze" values="342;342;315.355;315.355" keyTimes="0;0.262;0.346;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;26.791;26.791" keyTimes="0;0.262;0.346;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="342;342;315.209;315.209" keyTimes="0;0.262;0.346;1"/>
   </rect>
-  <rect x="382.333" y="315.355" width="34" height="0" rx="3" fill="#58a6ff">
+  <rect x="382.333" y="315.209" width="34" height="0" rx="3" fill="#58a6ff">
     <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;103.66;103.66" keyTimes="0;0.283;0.368;1"/>
-    <animate attributeName="y" dur="6.5s" fill="freeze" values="315.355;315.355;211.695;211.695" keyTimes="0;0.283;0.368;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="315.209;315.209;211.549;211.549" keyTimes="0;0.283;0.368;1"/>
   </rect>
-  <text x="399.333" y="204.695" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,785<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.362;0.38;1"/></text>
+  <text x="399.333" y="204.549" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,787<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.362;0.38;1"/></text>
   <text x="399.333" y="360" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2026</text>
   <text x="399.333" y="374" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" fill="#6e7681">to September</text>
   <text x="470" y="176" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.1" fill="#6e7681">COMMITS BY LANGUAGE OF THE REPOSITORY</text>
@@ -130,9 +130,9 @@
   <text x="470" y="331" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Python<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.454;0.472;1"/></text>
   <text x="590" y="331" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">3<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.454;0.472;1"/></text>
   <rect x="598" y="323" width="0" height="12" rx="3" fill="#3fb950">
-    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;12.69;12.69" keyTimes="0;0.454;0.538;1"/>
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;13.057;13.057" keyTimes="0;0.454;0.538;1"/>
   </rect>
-  <text x="876" y="331" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">69<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.531;0.549;1"/></text>
+  <text x="876" y="331" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">71<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.531;0.549;1"/></text>
   <text x="470" y="355" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Other<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.475;0.494;1"/></text>
   <text x="590" y="355" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">13<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.475;0.494;1"/></text>
   <rect x="598" y="347" width="0" height="12" rx="3" fill="#6e7681">
@@ -140,8 +140,9 @@
   </rect>
   <text x="876" y="355" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">97<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.552;0.571;1"/></text>
   <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.6;0.625;1"/>
-    <text x="24" y="398" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub. Counts only: no repository name, description or content is read.</text>
-    <text x="24" y="413" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits.</text>
-    <text x="24" y="428" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Ranked by commits rather than by repositories started, which would read Java 25 to C# 17, or by bytes, where Jupyter Notebook alone takes 82% because notebooks store their own rendered output.</text>
+    <text x="24" y="400" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub. Counts only: no repository name, description or content is read.</text>
+    <text x="24" y="415" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">GitHub attributes a commit only when its author address is verified on the account. 183 here are not, having been written from employer laptops under employer addresses: 40 in 2023, 104 in 2024, 39 in 2025.</text>
+    <text x="24" y="430" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Those are counted in the figure above but not in the chart, which shows what GitHub itself reports. 2022 is genuinely four: that year's work never reached GitHub at all.</text>
+    <text x="24" y="445" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Ranked by commits rather than by repositories started, which would read Java 25 to C# 17, or by bytes, where Jupyter Notebook alone takes 82% because notebooks store their own rendered output.</text>
   </g>
 </svg>

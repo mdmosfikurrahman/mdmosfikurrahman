@@ -442,7 +442,7 @@ def rooms(theme):
 #   and is absent from all of this. The 2022 figure is four commits for exactly
 #   that reason, and a panel claiming to measure should say so rather than crop.
 
-M_W, M_H = 900, 448
+M_W, M_H = 900, 464
 M_SPLIT = 450.0
 M_LEFT, M_RIGHT = 24.0, 470.0
 M_PLOT_X0, M_PLOT_X1 = 62.0, 430.0   # column chart, left of the value gutter
@@ -527,6 +527,8 @@ def measured(theme):
     by_repo_count = " to ".join("%s %d" % (k, v["repositories"])
                                 for k, v in by_repo)
     org_from = next(y for y in years if d["commits_by_year"][y]["organisation"])
+    missing = d["unattributed_by_year"]
+    missing_total = sum(missing.values())
     org_total = sum(d["commits_by_year"][y]["organisation"] for y in years)
 
     nice = datetime.strptime(d["generated"], "%Y-%m-%d").strftime("%d %B %Y")
@@ -548,8 +550,8 @@ def measured(theme):
     # -- standing figures ---------------------------------------------------
     stats = [(thousands(total_commits), "commits since %s" % years[0]),
              (thousands(org_total), "in organisation repos"),
+             (thousands(missing_total), "authored, not counted"),
              (str(total_repos), "repositories touched"),
-             (str(d["public_repositories"]), "of them public"),
              (str(len(d["commits_by_language"])), "languages")]
     cell = 852.0 / len(stats)
     for i, (value, label) in enumerate(stats):
@@ -671,8 +673,15 @@ def measured(theme):
         "Commits include private organisation repositories from %s, when the "
         "current employer's work moved onto GitHub. Counts only: no repository "
         "name, description or content is read." % org_from,
-        "Code written for earlier employers never lived on this account, which is "
-        "why 2022, a full year of Java in production, reads as four commits.",
+        "GitHub attributes a commit only when its author address is verified on "
+        "the account. %s here are not, having been written from employer laptops "
+        "under employer addresses: %s."
+        % (thousands(missing_total),
+           ", ".join("%s in %s" % (thousands(n), y)
+                     for y, n in sorted(missing.items()) if n)),
+        "Those are counted in the figure above but not in the chart, which shows "
+        "what GitHub itself reports. 2022 is genuinely four: that year's work "
+        "never reached GitHub at all.",
         # One %-format runs on this string, so a literal percent sign is %%.
         "Ranked by commits rather than by repositories started, which would read "
         "%s, or by bytes, where %s alone takes %d%% because notebooks store "
@@ -682,7 +691,7 @@ def measured(theme):
     out.append('<g opacity="0">%s\n%s\n</g>'
                % (fade(3.90),
                   indent(['<text x="24" y="%s" font-family="%s" font-size="9.5" '
-                          'fill="%s">%s</text>' % (398 + n * 15, SANS, p["faint"], t)
+                          'fill="%s">%s</text>' % (400 + n * 15, SANS, p["faint"], t)
                           for n, t in enumerate(lines)])))
 
     return """<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img"

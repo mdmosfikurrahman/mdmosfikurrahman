@@ -25,6 +25,13 @@ Two decisions worth knowing about, because both change the answer:
   account itself, private and organisation repositories are visible, and leaving
   them out would drop most of the recent work and almost all of the C#.
 
+It also counts what GitHub will not. A commit is only attributed to an account
+when its author address is verified on that account, so years spent committing
+from an employer laptop under an employer address are quietly undercounted. The
+scan over owned repositories below finds those commits by address and reports
+them separately, which is slow but is the difference between a chart that is
+low and a chart that is wrong.
+
 Uses the `gh` CLI so no token is handled here.
 """
 
@@ -52,10 +59,14 @@ CONTRIBUTIONS = """query($login:String!, $from:DateTime!, $to:DateTime!) {
 }"""
 
 
-def gh(*args):
+def gh(*args, **kwargs):
+    """Call the CLI. `tolerant` returns None instead of exiting, which an empty
+    repository needs: listing its commits is a 409, not a problem."""
     out = subprocess.run(("gh",) + args, capture_output=True, text=True,
                          encoding="utf-8")
     if out.returncode:
+        if kwargs.get("tolerant"):
+            return None
         sys.exit("gh %s failed:\n%s" % (" ".join(args), out.stderr.strip()))
     return json.loads(out.stdout or "null")
 
@@ -76,7 +87,7 @@ def main():
     bytes_by_language = Counter()
     for i, r in enumerate(public, 1):
         bytes_by_language.update(gh("api", "repos/%s/%s/languages"
-                                    % (LOGIN, r["name"])) or {})
+                                    % (LOGIN, r["name"]), tolerant=True) or {})
         if i % 20 == 0 or i == len(public):
             print("  languages %d/%d" % (i, len(public)))
 
@@ -126,6 +137,48 @@ def main():
         bucket["repositories"] += 1
         bucket["private_repositories"] += 1 if entry["private"] else 0
 
+    # Addresses this person has committed under. Anything not verified on the
+    # GitHub account produces a commit the contribution graph will not show.
+    # An employer address cannot be verified here any more, so these commits are
+    # recognised by the author name and address on the commit itself, inside
+    # repositories this account owns. Narrow enough not to claim other people's
+    # work, wide enough to find every laptop this person has ever committed from.
+    print("scanning owned repositories for unattributed commits ...")
+    owned, page = [], 1
+    while True:
+        batch = gh("api", "user/repos?affiliation=owner&per_page=100&page=%d" % page)
+        if not batch:
+            break
+        owned.extend(r for r in batch if not r["fork"])
+        page += 1
+
+    unattributed, seen_addresses = Counter(), Counter()
+    for i, r in enumerate(owned, 1):
+        page = 1
+        while True:
+            batch = gh("api", "repos/%s/commits?per_page=100&page=%d"
+                       % (r["full_name"], page), tolerant=True)
+            if not isinstance(batch, list) or not batch:
+                break
+            for c in batch:
+                author = (c.get("commit") or {}).get("author") or {}
+                linked = (c.get("author") or {}).get("login")
+                if linked == LOGIN:
+                    continue
+                email = (author.get("email") or "").lower()
+                name = (author.get("name") or "").lower()
+                if linked is None and ("mosfik" in email or "mosfik" in name):
+                    unattributed[(author.get("date") or "????")[:4]] += 1
+                    seen_addresses[email] += 1
+            if len(batch) < 100:
+                break
+            page += 1
+        if i % 20 == 0 or i == len(owned):
+            print("  %d/%d repositories" % (i, len(owned)))
+    print("  %d commits authored here but not attributed" % sum(unattributed.values()))
+    for email, n in seen_addresses.most_common():
+        print("    %-45s %4d" % (email, n))
+
     total_bytes = sum(bytes_by_language.values())
     top_byte_language, top_bytes = bytes_by_language.most_common(1)[0]
     snapshot = {
@@ -138,6 +191,9 @@ def main():
         "commits_by_language": dict(sorted(languages.items(),
                                            key=lambda kv: -kv[1]["commits"])),
         "unclassified": unclassified,
+        # Authored by this person, in repositories this account owns, but not
+        # attributed by GitHub because the address was never verified here.
+        "unattributed_by_year": dict(sorted(unattributed.items())),
         "byte_share_top_language": {
             "language": top_byte_language,
             "percent": round(100.0 * top_bytes / total_bytes),

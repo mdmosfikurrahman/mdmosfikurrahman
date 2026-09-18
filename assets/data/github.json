@@ -40,7 +40,7 @@
       "repositories": 3
     },
     "Python": {
-      "commits": 69,
+      "commits": 71,
       "private_repositories": 2,
       "repositories": 3
     },
@@ -87,10 +87,10 @@
       "own": 246
     },
     "2026": {
-      "commits": 1785,
+      "commits": 1787,
       "organisation": 1420,
       "organisation_repositories": 30,
-      "own": 365
+      "own": 367
     }
   },
   "generated": "2026-09-18",
@@ -98,6 +98,11 @@
   "public_repositories": 56,
   "repositories_touched": 97,
   "through_month": "September",
+  "unattributed_by_year": {
+    "2023": 40,
+    "2024": 104,
+    "2025": 39
+  },
   "unclassified": {
     "commits": 205,
     "repositories": 29
