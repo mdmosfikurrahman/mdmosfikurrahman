@@ -8,32 +8,26 @@ GitHub proxies these through camo, where scripts never execute but declarative
 animation does. Both themes come out of one palette swap and are selected in the
 README with <picture media="(prefers-color-scheme: ...)">.
 
-Three panels, one visual language, all about a person rather than a product.
+Two panels, one visual language, both about a person rather than a product.
 
-    career-*.svg    eight years on one axis. A header lockup with a year readout
-                    that ticks through the stack actually in hand at the time, a
-                    band of standing figures, then education, research and three
-                    employers. Work still running gets no hard right edge; it
-                    fades into the future it has not finished yet.
+    career-*.svg   eight years on one axis. A header lockup with a year readout
+                   that ticks through the stack actually in hand at the time, a
+                   band of standing figures, then education, research and three
+                   employers. Work still running gets no hard right edge; it
+                   fades into the future it has not finished yet.
 
-    rooms-*.svg     the three places the job was actually learned, as a
-                    triptych: what each refused to let through, and what that
-                    taught.
-
-    measured-*.svg  the only one nobody wrote. Every figure comes out of
-                    data/github.json, which fetch.py pulls from the API.
+    rooms-*.svg    the three places the job was actually learned, as a triptych:
+                   what each refused to let through, and what that taught.
 
 Each plays once and freezes, rather than looping beside someone trying to read.
 A page reload starts it again.
 
-There were charts of the platform at work as well, and they were good, but the
-page they sat on is meant to be about a person rather than a portfolio, so they
-came out again. `git log --diff-filter=D assets/` has them if they are wanted.
+Charts of the platform at work lived here once, and a panel of statistics read
+from the GitHub API after that. Both were interesting and neither belonged on a
+page about a person. `git log --diff-filter=D assets/` has them.
 """
 
-import json
 import os
-from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -426,321 +420,9 @@ def rooms(theme):
 """ % (R_W, R_H, R_W, R_H, R_W - 1, R_H - 1, p["bg"], p["border"], indent(out))
 
 
-# ============================================================ measured panel ==
-#
-# The only panel here that nobody wrote by hand. Every figure is read out of
-# assets/data/github.json, which assets/fetch.py pulls from the GitHub API.
-#
-# Two methodology calls worth defending, because both change the answer:
-#
-#   Repositories, not bytes. Jupyter notebooks store their rendered output in
-#   the file, so 83% of the account's bytes are one notebook's plots. Counting
-#   repositories by primary language gives Java 24 to C# 7, which is the true
-#   shape; counting bytes gives Jupyter 84%, which is an artefact.
-#
-#   Public only, and said out loud. Company work sits in private repositories
-#   and is absent from all of this. The 2022 figure is four commits for exactly
-#   that reason, and a panel claiming to measure should say so rather than crop.
-
-M_W, M_H = 900, 464
-M_SPLIT = 486.0
-M_LEFT, M_RIGHT = 24.0, 506.0
-M_PLOT_X0, M_PLOT_X1 = 62.0, 466.0   # column chart, right of the value gutter
-M_BAR_W, M_BAR_GAP = 24.0, 4.0       # one column per series, side by side
-M_BASE, M_TOP = 342.0, 196.0         # column chart floor and ceiling
-M_BAR_Y, M_BAR_H = 200.0, 24.0       # language rows
-
-
-def axis_ceiling(value, divisions=4):
-    """Round a maximum up to something a gridline can be labelled with."""
-    for step in (10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000):
-        if step * divisions >= value:
-            return step * divisions, step
-    return value, value / float(divisions)
-
-LANG_TONE = {"C#": "blue", "TypeScript": "purple", "Java": "orange",
-             "JavaScript": "yellow", "Python": "green", "TeX": "faint",
-             "Jupyter Notebook": "yellow", "HTML": "faint", "Other": "faint"}
-LANG_ROWS = 6
-
-
-def snapshot():
-    path = os.path.join(HERE, "data", "github.json")
-    if not os.path.exists(path):
-        raise SystemExit("missing %s — run `python assets/fetch.py` first" % path)
-    with open(path, encoding="utf-8") as fh:
-        return json.load(fh)
-
-
-def thousands(n):
-    return "{:,}".format(int(n))
-
-
-def grow_up(x, w, height, colour, t0, rx=3, floor=None):
-    """A column that rises out of its floor instead of appearing whole."""
-    floor = M_BASE if floor is None else floor
-    kt = ";".join(f(k / RUN) for k in (0.0, t0, t0 + 0.55, RUN))
-    return ('<rect x="%s" y="%s" width="%s" height="0" rx="%s" fill="%s">\n'
-            '  <animate attributeName="height" dur="%gs" fill="freeze"'
-            ' values="0;0;%s;%s" keyTimes="%s"/>\n'
-            '  <animate attributeName="y" dur="%gs" fill="freeze"'
-            ' values="%s;%s;%s;%s" keyTimes="%s"/>\n'
-            '</rect>'
-            % (f(x), f(floor), f(w), rx, colour,
-               RUN, f(height), f(height), kt,
-               RUN, f(floor), f(floor), f(floor - height), f(floor - height), kt))
-
-
-def grow_right(x, y, width, height, colour, t0, rx=3):
-    kt = ";".join(f(k / RUN) for k in (0.0, t0, t0 + 0.55, RUN))
-    return ('<rect x="%s" y="%s" width="0" height="%s" rx="%s" fill="%s">\n'
-            '  <animate attributeName="width" dur="%gs" fill="freeze"'
-            ' values="0;0;%s;%s" keyTimes="%s"/>\n'
-            '</rect>'
-            % (f(x), f(y), f(height), rx, colour, RUN, f(width), f(width), kt))
-
-
-def measured(theme):
-    p = PALETTES[theme]
-    d = snapshot()
-    out = []
-
-    years = sorted(d["commits_by_year"])
-    commits = [d["commits_by_year"][y]["commits"] for y in years]
-    total_commits = sum(commits)
-    total_repos = d["repositories_touched"]
-
-    # Ranked by commits, not by how many repositories were started. Started
-    # things are cheap; this is the measure that puts the day job in the chart.
-    ranked = sorted(d["commits_by_language"].items(),
-                    key=lambda kv: -kv[1]["commits"])
-    rows, tail = ranked[:LANG_ROWS], ranked[LANG_ROWS:]
-    if tail:
-        rows = rows + [("Other", {
-            "commits": sum(v["commits"] for _, v in tail),
-            "repositories": sum(v["repositories"] for _, v in tail),
-        })]
-    noisy = d["byte_share_top_language"]
-    # What the other ranking would have said, quoted from the same data so the
-    # note stays true the next time fetch.py runs.
-    by_repo = sorted(d["commits_by_language"].items(),
-                     key=lambda kv: -kv[1]["repositories"])[:2]
-    by_repo_count = " to ".join("%s %d" % (k, v["repositories"])
-                                for k, v in by_repo)
-    org_from = next(y for y in years if d["commits_by_year"][y]["organisation"])
-    missing = d["unattributed_by_year"]
-    missing_total = sum(missing.values())
-    org_total = sum(d["commits_by_year"][y]["organisation"] for y in years)
-
-    nice = datetime.strptime(d["generated"], "%Y-%m-%d").strftime("%d %B %Y")
-
-    # -- header -------------------------------------------------------------
-    out.append('<text x="24" y="34" font-family="%s" font-size="15" '
-               'font-weight="700" fill="%s">Public work, measured</text>'
-               % (SANS, p["fg"]))
-    out.append('<text x="24" y="54" font-family="%s" font-size="10.5" fill="%s">'
-               'Nothing on this panel was typed by hand. Every figure is read '
-               'straight from the GitHub API on %s.</text>'
-               % (SANS, p["faint"], esc(nice)))
-    out.append('<text x="876" y="34" text-anchor="end" font-family="%s" '
-               'font-size="10.5" fill="%s">gh api · %s</text>'
-               % (MONO, p["faint"], esc(d["login"])))
-    out.append('<line x1="24" y1="72" x2="876" y2="72" stroke="%s" '
-               'stroke-width="1"/>' % p["border"])
-
-    # -- standing figures ---------------------------------------------------
-    stats = [(thousands(total_commits), "commits since %s" % years[0]),
-             (thousands(org_total), "in organisation repos"),
-             (thousands(missing_total), "authored, not counted"),
-             (str(total_repos), "repositories touched"),
-             (str(len(d["commits_by_language"])), "languages")]
-    cell = 852.0 / len(stats)
-    for i, (value, label) in enumerate(stats):
-        cx = 24.0 + cell * (i + 0.5)
-        if i:
-            out.append('<line x1="%s" y1="88" x2="%s" y2="132" stroke="%s" '
-                       'stroke-width="1"/>'
-                       % (f(24.0 + cell * i), f(24.0 + cell * i), p["rule"]))
-        out.append('<g opacity="0">%s\n'
-                   '  <text x="%s" y="112" text-anchor="middle" font-family="%s" '
-                   'font-size="18" font-weight="700" fill="%s">%s</text>\n'
-                   '  <text x="%s" y="126" text-anchor="middle" font-family="%s" '
-                   'font-size="9" letter-spacing="0.4" fill="%s">%s</text>\n'
-                   '</g>'
-                   % (fade(0.30 + i * 0.09, 0.14), f(cx), MONO, p["fg"], esc(value),
-                      f(cx), SANS, p["faint"], esc(label.upper())))
-    out.append('<line x1="24" y1="148" x2="876" y2="148" stroke="%s" '
-               'stroke-width="1"/>' % p["border"])
-    out.append('<line x1="%s" y1="164" x2="%s" y2="380" stroke="%s" '
-               'stroke-width="1"/>' % (f(M_SPLIT), f(M_SPLIT), p["rule"]))
-
-    # -- commits per year ---------------------------------------------------
-    out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
-               'font-weight="700" letter-spacing="1.1" fill="%s">COMMITS PER YEAR'
-               '</text>' % (f(M_LEFT), SANS, p["faint"]))
-
-    # Two series, because "where are the organisation commits" is the first
-    # question this chart should answer rather than quietly fold into a total.
-    cursor = M_PLOT_X1
-    for tone, text in (("blue", "organisation"), ("green", "own")):
-        width = 11.0 + len(text) * 4.7
-        cursor -= width
-        out.append('<rect x="%s" y="170" width="8" height="8" rx="2" fill="%s"/>'
-                   % (f(cursor), p[tone]))
-        out.append('<text x="%s" y="177" font-family="%s" font-size="9" fill="%s">'
-                   '%s</text>' % (f(cursor + 11), SANS, p["faint"], esc(text)))
-        cursor -= 10.0
-
-    # A column chart with no quantitative reference is a sketch. The range here
-    # runs 4 to 1,785, so the short years are read off the label and the tall
-    # ones off the gridlines; both need to be there.
-    ceiling, step = axis_ceiling(max(commits))
-    scale = (M_BASE - M_TOP) / float(ceiling)
-    value = 0
-    while value <= ceiling:
-        gy = M_BASE - value * scale
-        out.append('<line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s" '
-                   'stroke-width="1"%s/>'
-                   % (f(M_PLOT_X0), f(gy), f(M_PLOT_X1), f(gy),
-                      p["border"] if not value else p["rule"],
-                      '' if not value else ' stroke-dasharray="2 4"'))
-        out.append('<text x="%s" y="%s" text-anchor="end" font-family="%s" '
-                   'font-size="8.5" fill="%s">%s</text>'
-                   % (f(M_PLOT_X0 - 8), f(gy + 3), MONO, p["faint"],
-                      esc(thousands(value))))
-        value += step
-
-    # Grouped rather than stacked: the two series answer different questions and
-    # a reader should be able to compare them directly instead of subtracting.
-    # Positions stay fixed even when a series is zero, so the arrival of
-    # organisation work shows up without a word of explanation.
-    span = (M_PLOT_X1 - M_PLOT_X0) / len(years)
-    group = M_BAR_W * 2 + M_BAR_GAP
-    for i, year in enumerate(years):
-        row = d["commits_by_year"][year]
-        cx = M_PLOT_X0 + span * (i + 0.5)
-        t0 = 0.90 + i * 0.16
-        for k, (key, tone) in enumerate((("own", "green"),
-                                         ("organisation", "blue"))):
-            n = row[key]
-            if not n:
-                continue
-            bx = cx - group / 2.0 + k * (M_BAR_W + M_BAR_GAP)
-            height = max(n * scale, 1.5)
-            out.append(grow_up(bx, M_BAR_W, height, p[tone], t0 + k * 0.10))
-            out.append('<text x="%s" y="%s" text-anchor="middle" '
-                       'font-family="%s" font-size="8.5" font-weight="700" '
-                       'fill="%s" opacity="0">%s%s</text>'
-                       % (f(bx + M_BAR_W / 2.0), f(M_BASE - height - 6), MONO,
-                          p["fg"], esc(thousands(n)),
-                          fade(t0 + k * 0.10 + 0.6, 0.12)))
-        out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
-                   'font-size="9.5" fill="%s">%s</text>'
-                   % (f(cx), f(M_BASE + 18), MONO, p["faint"], esc(year)))
-    out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
-               'font-size="8.5" fill="%s">to %s</text>'
-               % (f(M_PLOT_X0 + span * (len(years) - 0.5)), f(M_BASE + 32), SANS,
-                  p["faint"], esc(d["through_month"])))
-
-    # -- repositories by primary language -----------------------------------
-    out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
-               'font-weight="700" letter-spacing="1.1" fill="%s">'
-               'COMMITS BY LANGUAGE OF THE REPOSITORY</text>'
-               % (f(M_RIGHT), SANS, p["faint"]))
-
-    bar_x, bar_w = M_RIGHT + 128.0, 200.0
-    repo_x = M_RIGHT + 120.0
-    for label, x, anchor in (("REPOS", repo_x, "end"), ("COMMITS", 876, "end")):
-        out.append('<text x="%s" y="192" text-anchor="%s" font-family="%s" '
-                   'font-size="8" letter-spacing="0.8" fill="%s">%s</text>'
-                   % (f(x), anchor, SANS, p["faint"], label))
-
-    widest = max(v["commits"] for _, v in rows)
-    for i, (lang, v) in enumerate(rows):
-        y = M_BAR_Y + i * M_BAR_H
-        t0 = 2.25 + i * 0.14
-        out.append('<text x="%s" y="%s" font-family="%s" font-size="10" '
-                   'fill="%s" opacity="0">%s%s</text>'
-                   % (f(M_RIGHT), f(y + 11), SANS, p["muted"], esc(lang),
-                      fade(t0, 0.12)))
-        out.append('<text x="%s" y="%s" text-anchor="end" font-family="%s" '
-                   'font-size="9.5" fill="%s" opacity="0">%d%s</text>'
-                   % (f(repo_x), f(y + 11), MONO, p["faint"], v["repositories"],
-                      fade(t0, 0.12)))
-        out.append(grow_right(bar_x, y + 3,
-                              (v["commits"] / float(widest)) * bar_w, 12,
-                              p[LANG_TONE.get(lang, "faint")], t0))
-        out.append('<text x="876" y="%s" text-anchor="end" font-family="%s" '
-                   'font-size="10" font-weight="700" fill="%s" opacity="0">%s%s</text>'
-                   % (f(y + 11), MONO, p["fg"], esc(thousands(v["commits"])),
-                      fade(t0 + 0.5, 0.12)))
-
-    # -- what the numbers do not cover --------------------------------------
-    lines = [
-        "Commits include private organisation repositories from %s, when the "
-        "current employer's work moved onto GitHub. Counts only: no repository "
-        "name, description or content is read." % org_from,
-        "GitHub attributes a commit only when its author address is verified on "
-        "the account. %s here are not, having been written from employer laptops "
-        "under employer addresses: %s."
-        % (thousands(missing_total),
-           ", ".join("%s in %s" % (thousands(n), y)
-                     for y, n in sorted(missing.items()) if n)),
-        "Those are counted in the figure above but not in the chart, which shows "
-        "what GitHub itself reports. 2022 is genuinely four: that year's work "
-        "never reached GitHub at all.",
-        # One %-format runs on this string, so a literal percent sign is %%.
-        "Ranked by commits rather than by repositories started, which would read "
-        "%s, or by bytes, where %s alone takes %d%% because notebooks store "
-        "their own rendered output." % (by_repo_count, esc(noisy["language"]),
-                                        noisy["percent"]),
-    ]
-    out.append('<g opacity="0">%s\n%s\n</g>'
-               % (fade(3.90),
-                  indent(['<text x="24" y="%s" font-family="%s" font-size="9.5" '
-                          'fill="%s">%s</text>' % (400 + n * 15, SANS, p["faint"], t)
-                          for n, t in enumerate(lines)])))
-
-    return """<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img"
-     aria-label="%s">
-  <title>Public work, measured &#8212; read from the GitHub API</title>
-
-  <rect x="0.5" y="0.5" width="%s" height="%s" rx="10" fill="%s" stroke="%s"/>
-
-%s
-</svg>
-""" % (M_W, M_H, M_W, M_H,
-       esc("A panel of figures read from the GitHub API on %s for the account %s. "
-           "%s commits since %s, of which %s are in private organisation "
-           "repositories, across %d repositories committed to, %d of them public, "
-           "in %d languages. Commits per year, split into own and organisation "
-           "repositories, run %s. Commits by the primary language of the "
-           "repository, with the number of repositories in brackets, run %s. "
-           "Commits include private organisation repositories from %s, when the "
-           "current employer's work moved onto GitHub; only counts are read, never "
-           "a repository name, description or content. Code written for earlier "
-           "employers never lived on this account, which is why 2022, a full year "
-           "of Java in production, reads as four commits. Languages are ranked by "
-           "commits rather than by how many repositories were started, which would "
-           "read %s, and not by bytes, where notebooks alone take "
-           "most of the account because they store their own rendered output."
-           % (nice, d["login"], thousands(total_commits), years[0],
-              thousands(org_total), total_repos, d["public_repositories"],
-              len(d["commits_by_language"]),
-              ", ".join("%s %s own and %s organisation"
-                        % (y, thousands(d["commits_by_year"][y]["own"]),
-                           thousands(d["commits_by_year"][y]["organisation"]))
-                        for y in years),
-              ", ".join("%s %s (%d)" % (k, thousands(v["commits"]),
-                                        v["repositories"]) for k, v in rows),
-              org_from, by_repo_count)),
-       M_W - 1, M_H - 1, p["bg"], p["border"], indent(out))
-
-
 def main():
     for theme in ("dark", "light"):
-        for name, fn in (("career", career), ("rooms", rooms),
-                         ("measured", measured)):
+        for name, fn in (("career", career), ("rooms", rooms)):
             path = os.path.join(HERE, "%s-%s.svg" % (name, theme))
             with open(path, "w", encoding="utf-8", newline="\n") as fh:
                 fh.write(fn(theme))
