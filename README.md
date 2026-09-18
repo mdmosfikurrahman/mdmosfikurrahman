@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/trace-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/trace-light.svg" />
+    <img src="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/trace-dark.svg" width="900" alt="Distributed trace of one flight search on the Travilo platform: an API gateway span of 9.8 seconds, inside it a pricing-rule resolution of 0.24 seconds and an orchestrator that fans out in parallel to Sabre, Amadeus, Travelport, PKfare, AirMaster and six further connectors; merging begins at 3.55 seconds and the first fare reaches the agent over Server-Sent Events at 3.6 seconds, with 1,047 fares streamed by 9.8 seconds." />
+  </picture>
+</p>
+
 <h1 align="center">Md. Mosfikur Rahman</h1>
 
 <p align="center">
@@ -32,6 +40,16 @@ the system, then insist on evidence that it actually works.
 Backend architecture for **Travilo**, a multi-tenant, multi-brand online travel platform at
 **Akij iBOS Ltd.** — taken from an empty repository to **three live white-label deployments**
 serving **742 B2B agency accounts** and **1,000+ bookings a month**.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/topology-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/topology-light.svg" />
+    <img src="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/topology-dark.svg" width="900" alt="Topology of the Travilo platform: admin, B2B agency and B2C web panels on Next.js call eight .NET 9 services — reservation, finance, configuration, notification, report, user, visa and hotel — behind a search orchestrator that issues eleven parallel gRPC calls to Sabre, Amadeus, Travelport, PKfare and seven further connectors, then merges, ranks and streams the results back." />
+  </picture>
+</p>
+
+<p align="center"><sub>The same platform with the clock taken out. The trace at the top of this page is one request moving through it.</sub></p>
 
 - **Architecture.** Eight .NET 9 microservices — reservation, finance, configuration, notification,
   reporting, user, visa, hotel — with deliberate service boundaries, plus three operator panels
