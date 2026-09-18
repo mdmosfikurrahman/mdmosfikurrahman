@@ -443,9 +443,10 @@ def rooms(theme):
 #   that reason, and a panel claiming to measure should say so rather than crop.
 
 M_W, M_H = 900, 464
-M_SPLIT = 450.0
-M_LEFT, M_RIGHT = 24.0, 470.0
-M_PLOT_X0, M_PLOT_X1 = 62.0, 430.0   # column chart, left of the value gutter
+M_SPLIT = 486.0
+M_LEFT, M_RIGHT = 24.0, 506.0
+M_PLOT_X0, M_PLOT_X1 = 62.0, 466.0   # column chart, right of the value gutter
+M_BAR_W, M_BAR_GAP = 24.0, 4.0       # one column per series, side by side
 M_BASE, M_TOP = 342.0, 196.0         # column chart floor and ceiling
 M_BAR_Y, M_BAR_H = 200.0, 24.0       # language rows
 
@@ -609,24 +610,30 @@ def measured(theme):
                       esc(thousands(value))))
         value += step
 
+    # Grouped rather than stacked: the two series answer different questions and
+    # a reader should be able to compare them directly instead of subtracting.
+    # Positions stay fixed even when a series is zero, so the arrival of
+    # organisation work shows up without a word of explanation.
     span = (M_PLOT_X1 - M_PLOT_X0) / len(years)
+    group = M_BAR_W * 2 + M_BAR_GAP
     for i, year in enumerate(years):
         row = d["commits_by_year"][year]
         cx = M_PLOT_X0 + span * (i + 0.5)
-        mine, org = row["own"], row["organisation"]
-        h_mine, h_org = max(mine * scale, 1.5), org * scale
         t0 = 0.90 + i * 0.16
-        # Square off the joint when the column is stacked; only the top of a
-        # column should be rounded.
-        out.append(grow_up(cx - 17, 34, h_mine, p["green"], t0,
-                           rx=0 if org else 3))
-        if org:
-            out.append(grow_up(cx - 17, 34, h_org, p["blue"], t0 + 0.14,
-                               floor=M_BASE - h_mine))
-        out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
-                   'font-size="10" font-weight="700" fill="%s" opacity="0">%s%s</text>'
-                   % (f(cx), f(M_BASE - h_mine - h_org - 7), MONO, p["fg"],
-                      esc(thousands(row["commits"])), fade(t0 + 0.65, 0.12)))
+        for k, (key, tone) in enumerate((("own", "green"),
+                                         ("organisation", "blue"))):
+            n = row[key]
+            if not n:
+                continue
+            bx = cx - group / 2.0 + k * (M_BAR_W + M_BAR_GAP)
+            height = max(n * scale, 1.5)
+            out.append(grow_up(bx, M_BAR_W, height, p[tone], t0 + k * 0.10))
+            out.append('<text x="%s" y="%s" text-anchor="middle" '
+                       'font-family="%s" font-size="8.5" font-weight="700" '
+                       'fill="%s" opacity="0">%s%s</text>'
+                       % (f(bx + M_BAR_W / 2.0), f(M_BASE - height - 6), MONO,
+                          p["fg"], esc(thousands(n)),
+                          fade(t0 + k * 0.10 + 0.6, 0.12)))
         out.append('<text x="%s" y="%s" text-anchor="middle" font-family="%s" '
                    'font-size="9.5" fill="%s">%s</text>'
                    % (f(cx), f(M_BASE + 18), MONO, p["faint"], esc(year)))
@@ -641,7 +648,7 @@ def measured(theme):
                'COMMITS BY LANGUAGE OF THE REPOSITORY</text>'
                % (f(M_RIGHT), SANS, p["faint"]))
 
-    bar_x, bar_w = M_RIGHT + 128.0, 192.0
+    bar_x, bar_w = M_RIGHT + 128.0, 200.0
     repo_x = M_RIGHT + 120.0
     for label, x, anchor in (("REPOS", repo_x, "end"), ("COMMITS", 876, "end")):
         out.append('<text x="%s" y="192" text-anchor="%s" font-family="%s" '
