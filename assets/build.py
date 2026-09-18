@@ -8,16 +8,23 @@ GitHub proxies these through camo, where scripts never execute but declarative
 animation does. Both themes come out of one palette swap and are selected in the
 README with <picture media="(prefers-color-scheme: ...)">.
 
-Two panels, one visual language. Both are about a person rather than a product.
+Three panels, one visual language, all about a person rather than a product.
 
-    career-*.svg   eight years on one axis. A header lockup with a year readout
-                   that ticks through the stack actually in hand at the time, a
-                   band of standing figures, then education, research and three
-                   employers. Work still running gets no hard right edge; it
-                   fades into the future it has not finished yet.
+    career-*.svg    eight years on one axis. A header lockup with a year readout
+                    that ticks through the stack actually in hand at the time, a
+                    band of standing figures, then education, research and three
+                    employers. Work still running gets no hard right edge; it
+                    fades into the future it has not finished yet.
 
-    rooms-*.svg    the three places the job was actually learned, as a triptych:
-                   what each one refused to let through, and what that taught.
+    rooms-*.svg     the three places the job was actually learned, as a
+                    triptych: what each refused to let through, and what that
+                    taught.
+
+    measured-*.svg  the only one nobody wrote. Every figure comes out of
+                    data/github.json, which fetch.py pulls from the API.
+
+Each plays once and freezes, rather than looping beside someone trying to read.
+A page reload starts it again.
 
 There were charts of the platform at work as well, and they were good, but the
 page they sat on is meant to be about a person rather than a portfolio, so they
@@ -50,9 +57,12 @@ PALETTES = {
     ),
 }
 
-LOOP = 10.0
+# The panels play once and stay put. Nothing repeats, so a reader is not sitting
+# next to something that keeps moving while they read it; a page reload replays
+# it. Every animation runs on one RUN-second timeline and freezes on its last
+# value, which is why keyTimes below are absolute seconds divided by RUN.
+RUN = 6.5
 PLAY_FROM, PLAY_TO = 0.35, 5.60      # the playhead sweep
-DIM, RESET = 9.20, 9.68              # hold, then dim, then start over
 
 
 def esc(s):
@@ -69,11 +79,11 @@ def indent(lines, pad="  "):
 
 
 def fade(appear, rise=0.16):
-    """Opacity track: hidden, fades in at `appear`, dims out with the cycle."""
-    keys = [0.0, appear, appear + rise, DIM, RESET, LOOP]
-    return ('<animate attributeName="opacity" dur="%gs" repeatCount="indefinite"'
-            ' values="0;0;1;1;0;0" keyTimes="%s"/>'
-            % (LOOP, ";".join(f(k / LOOP) for k in keys)))
+    """Opacity track: hidden, fades in at `appear`, then stays."""
+    keys = [0.0, appear, appear + rise, RUN]
+    return ('<animate attributeName="opacity" dur="%gs" fill="freeze"'
+            ' values="0;0;1;1" keyTimes="%s"/>'
+            % (RUN, ";".join(f(k / RUN) for k in keys)))
 
 
 def steps(frames, x, y, size, colour, font=MONO, anchor="end", weight="700",
@@ -83,18 +93,21 @@ def steps(frames, x, y, size, colour, font=MONO, anchor="end", weight="700",
     SMIL cannot animate text content, so a ticker is N elements taking turns.
     """
     out = []
-    for start, stop, label in frames:
-        if stop <= start:
-            continue
+    usable = [fr for fr in frames if fr[1] > fr[0]]
+    for i, (start, stop, label) in enumerate(usable):
+        # The last frame has nothing to hand over to, so it stays on screen.
+        if i == len(usable) - 1:
+            values, keys = "0;1", "0;%s" % f(start / RUN)
+        else:
+            values = "0;1;0"
+            keys = "0;%s;%s" % (f(start / RUN), f(min(stop, RUN) / RUN))
         out.append('<text x="%s" y="%s" text-anchor="%s" font-family="%s" '
                    'font-size="%s" font-weight="%s"%s fill="%s" opacity="0">%s'
-                   '<animate attributeName="opacity" dur="%gs" '
-                   'repeatCount="indefinite" calcMode="discrete" values="0;1;0" '
-                   'keyTimes="0;%s;%s"/></text>'
+                   '<animate attributeName="opacity" dur="%gs" fill="freeze" '
+                   'calcMode="discrete" values="%s" keyTimes="%s"/></text>'
                    % (f(x), f(y), anchor, font, size, weight,
                       '' if spacing is None else ' letter-spacing="%s"' % spacing,
-                      colour, esc(label), LOOP,
-                      f(start / LOOP), f(min(stop, DIM) / LOOP)))
+                      colour, esc(label), RUN, values, keys))
     return out
 
 
@@ -273,27 +286,28 @@ def career(theme):
                "0.5" if tone == "soft" else "1", p[TONE[tone]]))
 
     wipe = ('<clipPath id="wipe"><rect x="%s" y="0" width="0" height="%d">\n'
-            '  <animate attributeName="width" dur="%gs" repeatCount="indefinite" '
+            '  <animate attributeName="width" dur="%gs" fill="freeze" '
             'calcMode="linear"\n'
-            '           values="0;0;%s;%s;0;0" keyTimes="0;%s;%s;%s;%s;1"/>\n'
+            '           values="0;0;%s;%s" keyTimes="0;%s;%s;1"/>\n'
             '</rect></clipPath>'
-            % (f(X0 - 1), H, LOOP, f(X1 - X0 + 3), f(X1 - X0 + 3),
-               f(PLAY_FROM / LOOP), f(PLAY_TO / LOOP),
-               f(DIM / LOOP), f((DIM + 0.02) / LOOP)))
+            % (f(X0 - 1), H, RUN, f(X1 - X0 + 3), f(X1 - X0 + 3),
+               f(PLAY_FROM / RUN), f(PLAY_TO / RUN)))
 
+    # The playhead is the one thing that should not survive the reveal: parked
+    # at the right-hand edge it would read as a border. It leaves when it lands.
     play = ('<g opacity="0">\n'
             '  <animateTransform attributeName="transform" type="translate" '
-            'dur="%gs" repeatCount="indefinite" calcMode="linear"\n'
+            'dur="%gs" fill="freeze" calcMode="linear"\n'
             '                    values="0 0;0 0;%s 0;%s 0" keyTimes="0;%s;%s;1"/>\n'
-            '  <animate attributeName="opacity" dur="%gs" repeatCount="indefinite" '
+            '  <animate attributeName="opacity" dur="%gs" fill="freeze" '
             'values="0;0;1;1;0;0" keyTimes="0;%s;%s;%s;%s;1"/>\n'
             '  <line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s" stroke-width="1.5"/>\n'
             '  <circle cx="%s" cy="%s" r="3.2" fill="%s"/>\n'
             '</g>'
-            % (LOOP, f(X1 - X0), f(X1 - X0),
-               f(PLAY_FROM / LOOP), f(PLAY_TO / LOOP), LOOP,
-               f(PLAY_FROM / LOOP), f((PLAY_FROM + 0.12) / LOOP),
-               f((PLAY_TO - 0.2) / LOOP), f((PLAY_TO + 0.25) / LOOP),
+            % (RUN, f(X1 - X0), f(X1 - X0),
+               f(PLAY_FROM / RUN), f(PLAY_TO / RUN), RUN,
+               f(PLAY_FROM / RUN), f((PLAY_FROM + 0.12) / RUN),
+               f((PLAY_TO - 0.15) / RUN), f((PLAY_TO + 0.35) / RUN),
                f(X0), GRID_TOP - 6, f(X0), GRID_BOTTOM + 6, p["accent"],
                f(X0), GRID_BOTTOM + 10, p["accent"]))
 
@@ -434,10 +448,10 @@ M_LEFT, M_RIGHT = 24.0, 470.0
 M_BASE, M_TOP = 340.0, 200.0         # column chart floor and ceiling
 M_BAR_Y, M_BAR_H = 200.0, 24.0       # language rows
 
-LANG_TONE = {"Java": "orange", "C#": "blue", "JavaScript": "yellow",
-             "Jupyter Notebook": "purple", "TeX": "faint", "HTML": "faint",
-             "Other": "faint"}
-LANG_SHOWN = ["Java", "C#", "JavaScript", "Jupyter Notebook", "HTML", "TeX"]
+LANG_TONE = {"C#": "blue", "TypeScript": "purple", "Java": "orange",
+             "JavaScript": "yellow", "Python": "green", "TeX": "faint",
+             "Jupyter Notebook": "green", "HTML": "faint", "Other": "faint"}
+LANG_ROWS = 6
 
 
 def snapshot():
@@ -455,28 +469,25 @@ def thousands(n):
 def grow_up(x, w, height, colour, t0, rx=3, floor=None):
     """A column that rises out of its floor instead of appearing whole."""
     floor = M_BASE if floor is None else floor
-    keys = [0.0, t0, t0 + 0.55, DIM, RESET, LOOP]
-    kt = ";".join(f(k / LOOP) for k in keys)
+    kt = ";".join(f(k / RUN) for k in (0.0, t0, t0 + 0.55, RUN))
     return ('<rect x="%s" y="%s" width="%s" height="0" rx="%s" fill="%s">\n'
-            '  <animate attributeName="height" dur="%gs" repeatCount="indefinite"'
-            ' values="0;0;%s;%s;0;0" keyTimes="%s"/>\n'
-            '  <animate attributeName="y" dur="%gs" repeatCount="indefinite"'
-            ' values="%s;%s;%s;%s;%s;%s" keyTimes="%s"/>\n'
+            '  <animate attributeName="height" dur="%gs" fill="freeze"'
+            ' values="0;0;%s;%s" keyTimes="%s"/>\n'
+            '  <animate attributeName="y" dur="%gs" fill="freeze"'
+            ' values="%s;%s;%s;%s" keyTimes="%s"/>\n'
             '</rect>'
             % (f(x), f(floor), f(w), rx, colour,
-               LOOP, f(height), f(height), kt,
-               LOOP, f(floor), f(floor), f(floor - height),
-               f(floor - height), f(floor), f(floor), kt))
+               RUN, f(height), f(height), kt,
+               RUN, f(floor), f(floor), f(floor - height), f(floor - height), kt))
 
 
 def grow_right(x, y, width, height, colour, t0, rx=3):
-    keys = [0.0, t0, t0 + 0.55, DIM, RESET, LOOP]
+    kt = ";".join(f(k / RUN) for k in (0.0, t0, t0 + 0.55, RUN))
     return ('<rect x="%s" y="%s" width="0" height="%s" rx="%s" fill="%s">\n'
-            '  <animate attributeName="width" dur="%gs" repeatCount="indefinite"'
-            ' values="0;0;%s;%s;0;0" keyTimes="%s"/>\n'
+            '  <animate attributeName="width" dur="%gs" fill="freeze"'
+            ' values="0;0;%s;%s" keyTimes="%s"/>\n'
             '</rect>'
-            % (f(x), f(y), f(height), rx, colour, LOOP, f(width), f(width),
-               ";".join(f(k / LOOP) for k in keys)))
+            % (f(x), f(y), f(height), rx, colour, RUN, f(width), f(width), kt))
 
 
 def measured(theme):
@@ -487,12 +498,25 @@ def measured(theme):
     years = sorted(d["commits_by_year"])
     commits = [d["commits_by_year"][y]["commits"] for y in years]
     total_commits = sum(commits)
-    total_repos = d["repositories"]["total"]
-    primary = d["repositories"]["by_primary_language"]
-    other = sum(v for k, v in primary.items() if k not in LANG_SHOWN)
-    rows = [(k, primary.get(k, 0)) for k in LANG_SHOWN] + [("Other", other)]
-    rows = [r for r in rows if r[1]]
+    total_repos = d["repositories_touched"]
+
+    # Ranked by commits, not by how many repositories were started. Started
+    # things are cheap; this is the measure that puts the day job in the chart.
+    ranked = sorted(d["commits_by_language"].items(),
+                    key=lambda kv: -kv[1]["commits"])
+    rows, tail = ranked[:LANG_ROWS], ranked[LANG_ROWS:]
+    if tail:
+        rows = rows + [("Other", {
+            "commits": sum(v["commits"] for _, v in tail),
+            "repositories": sum(v["repositories"] for _, v in tail),
+        })]
     noisy = d["byte_share_top_language"]
+    # What the other ranking would have said, quoted from the same data so the
+    # note stays true the next time fetch.py runs.
+    by_repo = sorted(d["commits_by_language"].items(),
+                     key=lambda kv: -kv[1]["repositories"])[:2]
+    by_repo_count = " to ".join("%s %d" % (k, v["repositories"])
+                                for k, v in by_repo)
     org_from = next(y for y in years if d["commits_by_year"][y]["organisation"])
     org_total = sum(d["commits_by_year"][y]["organisation"] for y in years)
 
@@ -515,9 +539,9 @@ def measured(theme):
     # -- standing figures ---------------------------------------------------
     stats = [(thousands(total_commits), "commits since %s" % years[0]),
              (thousands(org_total), "in organisation repos"),
-             (str(total_repos), "public repositories"),
-             (str(primary.get("Java", 0)), "of them in Java"),
-             (str(primary.get("C#", 0)), "of them in C#")]
+             (str(total_repos), "repositories touched"),
+             (str(d["public_repositories"]), "of them public"),
+             (str(len(d["commits_by_language"])), "languages")]
     cell = 852.0 / len(stats)
     for i, (value, label) in enumerate(stats):
         cx = 24.0 + cell * (i + 0.5)
@@ -587,23 +611,35 @@ def measured(theme):
     # -- repositories by primary language -----------------------------------
     out.append('<text x="%s" y="176" font-family="%s" font-size="9" '
                'font-weight="700" letter-spacing="1.1" fill="%s">'
-               'PUBLIC REPOSITORIES BY PRIMARY LANGUAGE</text>'
+               'COMMITS BY LANGUAGE OF THE REPOSITORY</text>'
                % (f(M_RIGHT), SANS, p["faint"]))
 
-    gutter, bar_x = 106.0, M_RIGHT + 106.0
-    widest = max(n for _, n in rows)
-    for i, (lang, n) in enumerate(rows):
+    bar_x, bar_w = M_RIGHT + 128.0, 192.0
+    repo_x = M_RIGHT + 120.0
+    for label, x, anchor in (("REPOS", repo_x, "end"), ("COMMITS", 876, "end")):
+        out.append('<text x="%s" y="192" text-anchor="%s" font-family="%s" '
+                   'font-size="8" letter-spacing="0.8" fill="%s">%s</text>'
+                   % (f(x), anchor, SANS, p["faint"], label))
+
+    widest = max(v["commits"] for _, v in rows)
+    for i, (lang, v) in enumerate(rows):
         y = M_BAR_Y + i * M_BAR_H
         t0 = 2.25 + i * 0.14
         out.append('<text x="%s" y="%s" font-family="%s" font-size="10" '
                    'fill="%s" opacity="0">%s%s</text>'
                    % (f(M_RIGHT), f(y + 11), SANS, p["muted"], esc(lang),
                       fade(t0, 0.12)))
-        out.append(grow_right(bar_x, y + 3, (n / float(widest)) * 232.0, 12,
+        out.append('<text x="%s" y="%s" text-anchor="end" font-family="%s" '
+                   'font-size="9.5" fill="%s" opacity="0">%d%s</text>'
+                   % (f(repo_x), f(y + 11), MONO, p["faint"], v["repositories"],
+                      fade(t0, 0.12)))
+        out.append(grow_right(bar_x, y + 3,
+                              (v["commits"] / float(widest)) * bar_w, 12,
                               p[LANG_TONE.get(lang, "faint")], t0))
         out.append('<text x="876" y="%s" text-anchor="end" font-family="%s" '
-                   'font-size="10" font-weight="700" fill="%s" opacity="0">%d%s</text>'
-                   % (f(y + 11), MONO, p["fg"], n, fade(t0 + 0.5, 0.12)))
+                   'font-size="10" font-weight="700" fill="%s" opacity="0">%s%s</text>'
+                   % (f(y + 11), MONO, p["fg"], esc(thousands(v["commits"])),
+                      fade(t0 + 0.5, 0.12)))
 
     # -- what the numbers do not cover --------------------------------------
     lines = [
@@ -612,10 +648,11 @@ def measured(theme):
         "name, description or content is read." % org_from,
         "Code written for earlier employers never lived on this account, which is "
         "why 2022, a full year of Java in production, reads as four commits.",
-        "Language shares are public repositories only, counted by repository "
-        "rather than by byte: %s stores its own rendered output and would "
-        "otherwise take %d%%%% of the account." % (esc(noisy["language"]),
-                                                   noisy["percent"]),
+        # One %-format runs on this string, so a literal percent sign is %%.
+        "Ranked by commits rather than by repositories started, which would read "
+        "%s, or by bytes, where %s alone takes %d%% because notebooks store "
+        "their own rendered output." % (by_repo_count, esc(noisy["language"]),
+                                        noisy["percent"]),
     ]
     out.append('<g opacity="0">%s\n%s\n</g>'
                % (fade(3.90),
@@ -634,25 +671,28 @@ def measured(theme):
 """ % (M_W, M_H, M_W, M_H,
        esc("A panel of figures read from the GitHub API on %s for the account %s. "
            "%s commits since %s, of which %s are in private organisation "
-           "repositories, across %d public repositories, of which %d are "
-           "primarily Java and %d primarily C#. Commits per year, split into own "
-           "and organisation repositories, run %s. Public repositories by primary "
-           "language run %s. Commits include private organisation repositories "
-           "from %s, when the current employer's work moved onto GitHub; only "
-           "counts are read, never a repository name, description or content. "
-           "Code written for earlier employers never lived on this account, which "
-           "is why 2022, a full year of Java in production, reads as four commits. "
-           "Language shares cover public repositories only and are counted by "
-           "repository rather than by byte, because notebooks store their own "
-           "rendered output."
+           "repositories, across %d repositories committed to, %d of them public, "
+           "in %d languages. Commits per year, split into own and organisation "
+           "repositories, run %s. Commits by the primary language of the "
+           "repository, with the number of repositories in brackets, run %s. "
+           "Commits include private organisation repositories from %s, when the "
+           "current employer's work moved onto GitHub; only counts are read, never "
+           "a repository name, description or content. Code written for earlier "
+           "employers never lived on this account, which is why 2022, a full year "
+           "of Java in production, reads as four commits. Languages are ranked by "
+           "commits rather than by how many repositories were started, which would "
+           "read %s, and not by bytes, where notebooks alone take "
+           "most of the account because they store their own rendered output."
            % (nice, d["login"], thousands(total_commits), years[0],
-              thousands(org_total), total_repos, primary.get("Java", 0),
-              primary.get("C#", 0),
+              thousands(org_total), total_repos, d["public_repositories"],
+              len(d["commits_by_language"]),
               ", ".join("%s %s own and %s organisation"
                         % (y, thousands(d["commits_by_year"][y]["own"]),
                            thousands(d["commits_by_year"][y]["organisation"]))
                         for y in years),
-              ", ".join("%s %d" % (k, n) for k, n in rows), org_from)),
+              ", ".join("%s %s (%d)" % (k, thousands(v["commits"]),
+                                        v["repositories"]) for k, v in rows),
+              org_from, by_repo_count)),
        M_W - 1, M_H - 1, p["bg"], p["border"], indent(out))
 
 

@@ -78,15 +78,18 @@ ask before they guess, and whether I made that easy or expensive.
 
 Since I just said that out loud, here is the account measured rather than described. Nothing on the
 panel below was typed by hand: `assets/fetch.py` reads the GitHub API and folds every response into
-totals before anything reaches disk, `assets/build.py` draws from that file. Work done for the
-current employer sits in private organisation repositories and is counted here, as counts and
-nothing else. The panel states its own blind spots rather than hiding them.
+totals before anything reaches disk, `assets/build.py` draws from that file.
+
+It ranks languages by commits rather than by repositories, which is the difference between where the
+work goes and what happened to get started. By repositories this reads Java 25 to C# 17. By commits
+it reads C# 1,044 to Java 288, and that is the honest answer. Private organisation repositories are
+included, as counts and nothing else, because leaving them out would drop most of the recent work.
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/measured-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/measured-light.svg" />
-    <img src="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/measured-dark.svg" width="900" alt="Figures read from the GitHub API on 18 September 2026: 2,840 commits since 2021, of which 1,876 are in private organisation repositories, across 56 public repositories, of which 24 are primarily Java and 7 primarily C#. Commits per year, split into own and organisation repositories, run 97 own in 2021, 4 own in 2022, 172 own in 2023, 81 own in 2024, 246 own and 456 organisation in 2025, and 364 own and 1,420 organisation in 2026 to September. Public repositories by primary language run Java 24, C# 7, JavaScript 5, Jupyter Notebook 4, HTML 3, TeX 3 and 5 others. Commits include private organisation repositories from 2025, when the current employer&#39;s work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Language shares cover public repositories only and are counted by repository rather than by byte, because notebooks store their own rendered output." />
+    <img src="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/measured-dark.svg" width="900" alt="Figures read from the GitHub API on 18 September 2026: 2,841 commits since 2021, of which 1,876 are in private organisation repositories, across 97 repositories committed to, 56 of them public, in 10 languages. Commits per year, split into own and organisation repositories, run 97 own in 2021, 4 own in 2022, 172 own in 2023, 81 own in 2024, 246 own and 456 organisation in 2025, and 365 own and 1,420 organisation in 2026 to September. Commits by the primary language of the repository, with repository counts in brackets, run C# 1,044 (17), TypeScript 954 (4), Java 288 (25), TeX 103 (3), Jupyter Notebook 81 (3), Python 69 (3), JavaScript 42 (5), HTML 34 (4), C++ 17 (2), CSS 4 (2). Commits include private organisation repositories from 2025, when the current employer&#39;s work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Languages are ranked by commits rather than by how many repositories were started, which would read Java 25 to C# 17, and not by bytes, where notebooks alone take most of the account because they store their own rendered output." />
   </picture>
 </p>
 

@@ -3,6 +3,58 @@
     "language": "Jupyter Notebook",
     "percent": 82
   },
+  "commits_by_language": {
+    "C#": {
+      "commits": 1044,
+      "private_repositories": 8,
+      "repositories": 17
+    },
+    "C++": {
+      "commits": 17,
+      "private_repositories": 0,
+      "repositories": 2
+    },
+    "CSS": {
+      "commits": 4,
+      "private_repositories": 0,
+      "repositories": 2
+    },
+    "HTML": {
+      "commits": 34,
+      "private_repositories": 1,
+      "repositories": 4
+    },
+    "Java": {
+      "commits": 288,
+      "private_repositories": 4,
+      "repositories": 25
+    },
+    "JavaScript": {
+      "commits": 42,
+      "private_repositories": 2,
+      "repositories": 5
+    },
+    "Jupyter Notebook": {
+      "commits": 81,
+      "private_repositories": 0,
+      "repositories": 3
+    },
+    "Python": {
+      "commits": 69,
+      "private_repositories": 2,
+      "repositories": 3
+    },
+    "TeX": {
+      "commits": 103,
+      "private_repositories": 0,
+      "repositories": 3
+    },
+    "TypeScript": {
+      "commits": 954,
+      "private_repositories": 4,
+      "repositories": 4
+    }
+  },
   "commits_by_year": {
     "2021": {
       "commits": 97,
@@ -35,34 +87,19 @@
       "own": 246
     },
     "2026": {
-      "commits": 1784,
+      "commits": 1785,
       "organisation": 1420,
       "organisation_repositories": 30,
-      "own": 364
+      "own": 365
     }
   },
   "generated": "2026-09-18",
   "login": "mdmosfikurrahman",
-  "repositories": {
-    "by_primary_language": {
-      "C#": 7,
-      "C++": 2,
-      "CSS": 2,
-      "HTML": 3,
-      "Java": 24,
-      "JavaScript": 5,
-      "Jupyter Notebook": 4,
-      "Python": 1,
-      "TeX": 3
-    },
-    "created_by_year": {
-      "2021": 6,
-      "2023": 9,
-      "2024": 14,
-      "2025": 23,
-      "2026": 4
-    },
-    "total": 56
-  },
-  "through_month": "September"
+  "public_repositories": 56,
+  "repositories_touched": 97,
+  "through_month": "September",
+  "unclassified": {
+    "commits": 205,
+    "repositories": 29
+  }
 }

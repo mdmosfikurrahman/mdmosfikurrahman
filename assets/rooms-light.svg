@@ -8,52 +8,52 @@
   <text x="24" y="54" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#818b98">Nobody handed me this. What I know about building software I learned in three places that disagreed with each other.</text>
   <text x="876" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#818b98">2022 to now</text>
   <line x1="24" y1="72" x2="876" y2="72" stroke="#d0d7de" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.055;0.069;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.085;0.106;1"/>
     <text x="24" y="104" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.4" fill="#0969da">01</text>
     <text x="24" y="128" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2328">A Japanese review process</text>
     <text x="24" y="144" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">BJIT Group, 2022–2023</text>
     <rect x="24" y="156" width="36" height="2" rx="1" fill="#0969da"/>
   </g>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.085;0.099;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.131;0.152;1"/>
     <text x="24" y="184" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#818b98">WHAT IT WOULD NOT ALLOW</text>
     <text x="24" y="202" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#59636e">Every change read by people who would not let it</text>
     <text x="24" y="217" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#59636e">through for reasons I had never thought to check.</text>
   </g>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.115;0.129;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.177;0.198;1"/>
     <text x="24" y="246" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#818b98">WHAT THAT TAUGHT</text>
     <text x="24" y="264" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#1f2328">The reviewer is a user of your code, and the</text>
     <text x="24" y="279" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#1f2328">most expensive one to disappoint.</text>
   </g>
   <line x1="300" y1="92" x2="300" y2="286" stroke="#e4e8ed" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.175;0.189;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.269;0.291;1"/>
     <text x="316" y="104" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.4" fill="#0969da">02</text>
     <text x="316" y="128" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2328">A government office</text>
     <text x="316" y="144" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">REVE Systems, 2023–2024</text>
     <rect x="316" y="156" width="36" height="2" rx="1" fill="#0969da"/>
   </g>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.205;0.219;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.315;0.337;1"/>
     <text x="316" y="184" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#818b98">WHAT IT WOULD NOT ALLOW</text>
     <text x="316" y="202" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#59636e">Customs compliance for exporters who would be</text>
     <text x="316" y="217" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#59636e">audited on whatever the system printed.</text>
   </g>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.235;0.249;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.362;0.383;1"/>
     <text x="316" y="246" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#818b98">WHAT THAT TAUGHT</text>
     <text x="316" y="264" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#1f2328">Correctness is not a quality you add later.</text>
     <text x="316" y="279" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#1f2328">On some systems it is the entire product.</text>
   </g>
   <line x1="592" y1="92" x2="592" y2="286" stroke="#e4e8ed" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.295;0.309;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.454;0.475;1"/>
     <text x="608" y="104" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" letter-spacing="1.4" fill="#0969da">03</text>
     <text x="608" y="128" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1f2328">An empty repository</text>
     <text x="608" y="144" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#818b98">Akij iBOS, 2024 to now</text>
     <rect x="608" y="156" width="36" height="2" rx="1" fill="#0969da"/>
   </g>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.325;0.339;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.5;0.522;1"/>
     <text x="608" y="184" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#818b98">WHAT IT WOULD NOT ALLOW</text>
     <text x="608" y="202" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#59636e">No prior art, ten engineers waiting, and three</text>
     <text x="608" y="217" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#59636e">clients arriving before the second release.</text>
   </g>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.355;0.369;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.546;0.568;1"/>
     <text x="608" y="246" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.1" fill="#818b98">WHAT THAT TAUGHT</text>
     <text x="608" y="264" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#1f2328">Architecture is only the decisions that are</text>
     <text x="608" y="279" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#1f2328">expensive to undo. Make those ones slowly.</text>

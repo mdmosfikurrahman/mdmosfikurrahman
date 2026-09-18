@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="448" viewBox="0 0 900 448" role="img"
-     aria-label="A panel of figures read from the GitHub API on 18 September 2026 for the account mdmosfikurrahman. 2,840 commits since 2021, of which 1,876 are in private organisation repositories, across 56 public repositories, of which 24 are primarily Java and 7 primarily C#. Commits per year, split into own and organisation repositories, run 2021 97 own and 0 organisation, 2022 4 own and 0 organisation, 2023 172 own and 0 organisation, 2024 81 own and 0 organisation, 2025 246 own and 456 organisation, 2026 364 own and 1,420 organisation. Public repositories by primary language run Java 24, C# 7, JavaScript 5, Jupyter Notebook 4, HTML 3, TeX 3, Other 5. Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Language shares cover public repositories only and are counted by repository rather than by byte, because notebooks store their own rendered output.">
+     aria-label="A panel of figures read from the GitHub API on 18 September 2026 for the account mdmosfikurrahman. 2,841 commits since 2021, of which 1,876 are in private organisation repositories, across 97 repositories committed to, 56 of them public, in 10 languages. Commits per year, split into own and organisation repositories, run 2021 97 own and 0 organisation, 2022 4 own and 0 organisation, 2023 172 own and 0 organisation, 2024 81 own and 0 organisation, 2025 246 own and 456 organisation, 2026 365 own and 1,420 organisation. Commits by the primary language of the repository, with the number of repositories in brackets, run C# 1,044 (17), TypeScript 954 (4), Java 288 (25), TeX 103 (3), Jupyter Notebook 81 (3), Python 69 (3), Other 97 (13). Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub; only counts are read, never a repository name, description or content. Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits. Languages are ranked by commits rather than by how many repositories were started, which would read Java 25 to C# 17, and not by bytes, where notebooks alone take most of the account because they store their own rendered output.">
   <title>Public work, measured &#8212; read from the GitHub API</title>
 
   <rect x="0.5" y="0.5" width="899" height="447" rx="10" fill="#0d1117" stroke="#30363d"/>
@@ -8,29 +8,29 @@
   <text x="24" y="54" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="#6e7681">Nothing on this panel was typed by hand. Every figure is read straight from the GitHub API on 18 September 2026.</text>
   <text x="876" y="34" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#6e7681">gh api · mdmosfikurrahman</text>
   <line x1="24" y1="72" x2="876" y2="72" stroke="#30363d" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.03;0.044;0.92;0.968;1"/>
-    <text x="109.2" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">2,840</text>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.046;0.068;1"/>
+    <text x="109.2" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">2,841</text>
     <text x="109.2" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">COMMITS SINCE 2021</text>
   </g>
   <line x1="194.4" y1="88" x2="194.4" y2="132" stroke="#21262d" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.039;0.053;0.92;0.968;1"/>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.06;0.082;1"/>
     <text x="279.6" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">1,876</text>
     <text x="279.6" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">IN ORGANISATION REPOS</text>
   </g>
   <line x1="364.8" y1="88" x2="364.8" y2="132" stroke="#21262d" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.048;0.062;0.92;0.968;1"/>
-    <text x="450" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">56</text>
-    <text x="450" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">PUBLIC REPOSITORIES</text>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.074;0.095;1"/>
+    <text x="450" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">97</text>
+    <text x="450" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">REPOSITORIES TOUCHED</text>
   </g>
   <line x1="535.2" y1="88" x2="535.2" y2="132" stroke="#21262d" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.057;0.071;0.92;0.968;1"/>
-    <text x="620.4" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">24</text>
-    <text x="620.4" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM IN JAVA</text>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.088;0.109;1"/>
+    <text x="620.4" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">56</text>
+    <text x="620.4" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM PUBLIC</text>
   </g>
   <line x1="705.6" y1="88" x2="705.6" y2="132" stroke="#21262d" stroke-width="1"/>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.066;0.08;0.92;0.968;1"/>
-    <text x="790.8" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">7</text>
-    <text x="790.8" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">OF THEM IN C#</text>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.102;0.123;1"/>
+    <text x="790.8" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" font-weight="700" fill="#e6edf3">10</text>
+    <text x="790.8" y="126" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" letter-spacing="0.4" fill="#6e7681">LANGUAGES</text>
   </g>
   <line x1="24" y1="148" x2="876" y2="148" stroke="#30363d" stroke-width="1"/>
   <line x1="450" y1="164" x2="450" y2="380" stroke="#21262d" stroke-width="1"/>
@@ -41,89 +41,98 @@
   <rect x="327.5" y="170" width="8" height="8" rx="2" fill="#3fb950"/>
   <text x="338.5" y="177" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" fill="#6e7681">own</text>
   <rect x="37.833" y="340" width="40" height="0" rx="3" fill="#3fb950">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;7.612;7.612;0;0" keyTimes="0;0.09;0.145;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;332.388;332.388;340;340" keyTimes="0;0.09;0.145;0.92;0.968;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;7.608;7.608" keyTimes="0;0.138;0.223;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="340;340;332.392;332.392" keyTimes="0;0.138;0.223;1"/>
   </rect>
-  <text x="57.833" y="325.388" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">97<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.155;0.167;0.92;0.968;1"/></text>
+  <text x="57.833" y="325.392" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">97<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.238;0.257;1"/></text>
   <text x="57.833" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2021</text>
   <rect x="105.5" y="340" width="40" height="0" rx="3" fill="#3fb950">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;2;2;0;0" keyTimes="0;0.106;0.161;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;338;338;340;340" keyTimes="0;0.106;0.161;0.92;0.968;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;2;2" keyTimes="0;0.163;0.248;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="340;340;338;338" keyTimes="0;0.163;0.248;1"/>
   </rect>
-  <text x="125.5" y="331" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">4<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.171;0.183;0.92;0.968;1"/></text>
+  <text x="125.5" y="331" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">4<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.263;0.282;1"/></text>
   <text x="125.5" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2022</text>
   <rect x="173.167" y="340" width="40" height="0" rx="3" fill="#3fb950">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;13.498;13.498;0;0" keyTimes="0;0.122;0.177;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;326.502;326.502;340;340" keyTimes="0;0.122;0.177;0.92;0.968;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;13.49;13.49" keyTimes="0;0.188;0.272;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="340;340;326.51;326.51" keyTimes="0;0.188;0.272;1"/>
   </rect>
-  <text x="193.167" y="319.502" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">172<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.187;0.199;0.92;0.968;1"/></text>
+  <text x="193.167" y="319.51" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">172<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.288;0.306;1"/></text>
   <text x="193.167" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2023</text>
   <rect x="240.833" y="340" width="40" height="0" rx="3" fill="#3fb950">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;6.357;6.357;0;0" keyTimes="0;0.138;0.193;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;333.643;333.643;340;340" keyTimes="0;0.138;0.193;0.92;0.968;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;6.353;6.353" keyTimes="0;0.212;0.297;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="340;340;333.647;333.647" keyTimes="0;0.212;0.297;1"/>
   </rect>
-  <text x="260.833" y="326.643" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">81<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.203;0.215;0.92;0.968;1"/></text>
+  <text x="260.833" y="326.647" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">81<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.312;0.331;1"/></text>
   <text x="260.833" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2024</text>
   <rect x="308.5" y="340" width="40" height="0" rx="2" fill="#3fb950">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;19.305;19.305;0;0" keyTimes="0;0.154;0.209;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;320.695;320.695;340;340" keyTimes="0;0.154;0.209;0.92;0.968;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;19.294;19.294" keyTimes="0;0.237;0.322;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="340;340;320.706;320.706" keyTimes="0;0.237;0.322;1"/>
   </rect>
-  <rect x="308.5" y="320.695" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;35.785;35.785;0;0" keyTimes="0;0.168;0.223;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="320.695;320.695;284.91;284.91;320.695;320.695" keyTimes="0;0.168;0.223;0.92;0.968;1"/>
+  <rect x="308.5" y="320.706" width="40" height="0" rx="3" fill="#58a6ff">
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;35.765;35.765" keyTimes="0;0.258;0.343;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="320.706;320.706;284.941;284.941" keyTimes="0;0.258;0.343;1"/>
   </rect>
-  <text x="328.5" y="277.91" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">702<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.219;0.231;0.92;0.968;1"/></text>
+  <text x="328.5" y="277.941" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">702<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.337;0.355;1"/></text>
   <text x="328.5" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2025</text>
   <rect x="376.167" y="340" width="40" height="0" rx="2" fill="#3fb950">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;28.565;28.565;0;0" keyTimes="0;0.17;0.225;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="340;340;311.435;311.435;340;340" keyTimes="0;0.17;0.225;0.92;0.968;1"/>
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;28.627;28.627" keyTimes="0;0.262;0.346;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="340;340;311.373;311.373" keyTimes="0;0.262;0.346;1"/>
   </rect>
-  <rect x="376.167" y="311.435" width="40" height="0" rx="3" fill="#58a6ff">
-    <animate attributeName="height" dur="10s" repeatCount="indefinite" values="0;0;111.435;111.435;0;0" keyTimes="0;0.184;0.239;0.92;0.968;1"/>
-    <animate attributeName="y" dur="10s" repeatCount="indefinite" values="311.435;311.435;200;200;311.435;311.435" keyTimes="0;0.184;0.239;0.92;0.968;1"/>
+  <rect x="376.167" y="311.373" width="40" height="0" rx="3" fill="#58a6ff">
+    <animate attributeName="height" dur="6.5s" fill="freeze" values="0;0;111.373;111.373" keyTimes="0;0.283;0.368;1"/>
+    <animate attributeName="y" dur="6.5s" fill="freeze" values="311.373;311.373;200;200" keyTimes="0;0.283;0.368;1"/>
   </rect>
-  <text x="396.167" y="193" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,784<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.235;0.247;0.92;0.968;1"/></text>
+  <text x="396.167" y="193" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,785<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.362;0.38;1"/></text>
   <text x="396.167" y="356" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681">2026</text>
   <text x="396.167" y="372" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8.5" fill="#6e7681">to September</text>
-  <text x="470" y="176" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.1" fill="#6e7681">PUBLIC REPOSITORIES BY PRIMARY LANGUAGE</text>
-  <text x="470" y="211" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Java<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.225;0.237;0.92;0.968;1"/></text>
-  <rect x="576" y="203" width="0" height="12" rx="3" fill="#f0883e">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;232;232;0;0" keyTimes="0;0.225;0.28;0.92;0.968;1"/>
+  <text x="470" y="176" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1.1" fill="#6e7681">COMMITS BY LANGUAGE OF THE REPOSITORY</text>
+  <text x="590" y="192" text-anchor="end" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8" letter-spacing="0.8" fill="#6e7681">REPOS</text>
+  <text x="876" y="192" text-anchor="end" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="8" letter-spacing="0.8" fill="#6e7681">COMMITS</text>
+  <text x="470" y="211" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">C#<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.346;0.365;1"/></text>
+  <text x="590" y="211" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">17<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.346;0.365;1"/></text>
+  <rect x="598" y="203" width="0" height="12" rx="3" fill="#58a6ff">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;192;192" keyTimes="0;0.346;0.431;1"/>
   </rect>
-  <text x="876" y="211" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">24<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.275;0.287;0.92;0.968;1"/></text>
-  <text x="470" y="235" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">C#<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.239;0.251;0.92;0.968;1"/></text>
-  <rect x="576" y="227" width="0" height="12" rx="3" fill="#58a6ff">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;67.667;67.667;0;0" keyTimes="0;0.239;0.294;0.92;0.968;1"/>
+  <text x="876" y="211" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">1,044<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.423;0.442;1"/></text>
+  <text x="470" y="235" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">TypeScript<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.368;0.386;1"/></text>
+  <text x="590" y="235" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">4<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.368;0.386;1"/></text>
+  <rect x="598" y="227" width="0" height="12" rx="3" fill="#bc8cff">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;175.448;175.448" keyTimes="0;0.368;0.452;1"/>
   </rect>
-  <text x="876" y="235" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">7<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.289;0.301;0.92;0.968;1"/></text>
-  <text x="470" y="259" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">JavaScript<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.253;0.265;0.92;0.968;1"/></text>
-  <rect x="576" y="251" width="0" height="12" rx="3" fill="#d29922">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;48.333;48.333;0;0" keyTimes="0;0.253;0.308;0.92;0.968;1"/>
+  <text x="876" y="235" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">954<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.445;0.463;1"/></text>
+  <text x="470" y="259" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Java<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.389;0.408;1"/></text>
+  <text x="590" y="259" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">25<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.389;0.408;1"/></text>
+  <rect x="598" y="251" width="0" height="12" rx="3" fill="#f0883e">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;52.966;52.966" keyTimes="0;0.389;0.474;1"/>
   </rect>
-  <text x="876" y="259" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">5<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.303;0.315;0.92;0.968;1"/></text>
-  <text x="470" y="283" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Jupyter Notebook<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.267;0.279;0.92;0.968;1"/></text>
-  <rect x="576" y="275" width="0" height="12" rx="3" fill="#bc8cff">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;38.667;38.667;0;0" keyTimes="0;0.267;0.322;0.92;0.968;1"/>
+  <text x="876" y="259" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">288<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.466;0.485;1"/></text>
+  <text x="470" y="283" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">TeX<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.411;0.429;1"/></text>
+  <text x="590" y="283" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">3<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.411;0.429;1"/></text>
+  <rect x="598" y="275" width="0" height="12" rx="3" fill="#6e7681">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;18.943;18.943" keyTimes="0;0.411;0.495;1"/>
   </rect>
-  <text x="876" y="283" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">4<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.317;0.329;0.92;0.968;1"/></text>
-  <text x="470" y="307" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">HTML<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.281;0.293;0.92;0.968;1"/></text>
-  <rect x="576" y="299" width="0" height="12" rx="3" fill="#6e7681">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;29;29;0;0" keyTimes="0;0.281;0.336;0.92;0.968;1"/>
+  <text x="876" y="283" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">103<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.488;0.506;1"/></text>
+  <text x="470" y="307" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Jupyter Notebook<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.432;0.451;1"/></text>
+  <text x="590" y="307" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">3<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.432;0.451;1"/></text>
+  <rect x="598" y="299" width="0" height="12" rx="3" fill="#3fb950">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;14.897;14.897" keyTimes="0;0.432;0.517;1"/>
   </rect>
-  <text x="876" y="307" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">3<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.331;0.343;0.92;0.968;1"/></text>
-  <text x="470" y="331" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">TeX<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.295;0.307;0.92;0.968;1"/></text>
-  <rect x="576" y="323" width="0" height="12" rx="3" fill="#6e7681">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;29;29;0;0" keyTimes="0;0.295;0.35;0.92;0.968;1"/>
+  <text x="876" y="307" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">81<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.509;0.528;1"/></text>
+  <text x="470" y="331" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Python<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.454;0.472;1"/></text>
+  <text x="590" y="331" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">3<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.454;0.472;1"/></text>
+  <rect x="598" y="323" width="0" height="12" rx="3" fill="#3fb950">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;12.69;12.69" keyTimes="0;0.454;0.538;1"/>
   </rect>
-  <text x="876" y="331" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">3<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.345;0.357;0.92;0.968;1"/></text>
-  <text x="470" y="355" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Other<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.309;0.321;0.92;0.968;1"/></text>
-  <rect x="576" y="347" width="0" height="12" rx="3" fill="#6e7681">
-    <animate attributeName="width" dur="10s" repeatCount="indefinite" values="0;0;48.333;48.333;0;0" keyTimes="0;0.309;0.364;0.92;0.968;1"/>
+  <text x="876" y="331" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">69<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.531;0.549;1"/></text>
+  <text x="470" y="355" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="10" fill="#8b949e" opacity="0">Other<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.475;0.494;1"/></text>
+  <text x="590" y="355" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" fill="#6e7681" opacity="0">13<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.475;0.494;1"/></text>
+  <rect x="598" y="347" width="0" height="12" rx="3" fill="#6e7681">
+    <animate attributeName="width" dur="6.5s" fill="freeze" values="0;0;17.839;17.839" keyTimes="0;0.475;0.56;1"/>
   </rect>
-  <text x="876" y="355" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">5<animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.359;0.371;0.92;0.968;1"/></text>
-  <g opacity="0"><animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.39;0.406;0.92;0.968;1"/>
+  <text x="876" y="355" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#e6edf3" opacity="0">97<animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.552;0.571;1"/></text>
+  <g opacity="0"><animate attributeName="opacity" dur="6.5s" fill="freeze" values="0;0;1;1" keyTimes="0;0.6;0.625;1"/>
     <text x="24" y="398" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Commits include private organisation repositories from 2025, when the current employer's work moved onto GitHub. Counts only: no repository name, description or content is read.</text>
     <text x="24" y="413" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Code written for earlier employers never lived on this account, which is why 2022, a full year of Java in production, reads as four commits.</text>
-    <text x="24" y="428" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Language shares are public repositories only, counted by repository rather than by byte: Jupyter Notebook stores its own rendered output and would otherwise take 82%% of the account.</text>
+    <text x="24" y="428" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="9.5" fill="#6e7681">Ranked by commits rather than by repositories started, which would read Java 25 to C# 17, or by bytes, where Jupyter Notebook alone takes 82% because notebooks store their own rendered output.</text>
   </g>
 </svg>
