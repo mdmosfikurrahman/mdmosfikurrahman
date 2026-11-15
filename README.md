@@ -28,3 +28,10 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/mdmosfikurrahman/mdmosfikurrahman/main/assets/tech.svg" width="760" alt="Tech stack. Languages: C#, Java, TypeScript, Python. Frameworks and APIs: .NET, Spring, GraphQL, gRPC, React, Next.js. Data: SQL Server, PostgreSQL, Redis, Elasticsearch. Cloud and DevOps: Docker, Kubernetes, Azure, AWS." />
 </p>
+
+---
+
+<p align="center">
+  <samp>Available for a small number of freelance .NET and Java backend projects —</samp>
+  <a href="https://www.fiverr.com/mosfikur_rahman">fiverr.com/mosfikur_rahman</a>
+</p>
